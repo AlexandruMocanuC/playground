@@ -65,3 +65,8 @@
 		justify-content: center;
 	}
 }
+@media (max-width: 640px) {
+	.navigation {
+		padding: var(--space-default);
+	}
+}
