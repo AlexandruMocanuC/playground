@@ -47,3 +47,8 @@
 		margin-bottom: var(--space-l);
 	}
 }
+@media (max-width: 480px) {
+	.footer .menu {
+		width: 100%;
+	}
+}
