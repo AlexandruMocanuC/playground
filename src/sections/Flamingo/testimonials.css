@@ -9,3 +9,8 @@
 	margin-right: auto;
 	border-radius: 50%;
 }
+@media (max-width: 1200px) {
+	.testimonials-section .column {
+		margin-bottom: var(--space-default);
+	}
+}

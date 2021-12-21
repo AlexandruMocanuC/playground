@@ -7,7 +7,7 @@ const Testimonials = () => {
 		import('./testimonials.css');
 	});
 	return (
-		<div className="columns-4 mb-l">
+		<div className="columns-4 mb-l testimonials-section">
 			<div className="column text-center">
 				<div className="bg-blue p-m b-white">
 					<i className="fas fa-quote-right mb-default icon-green"></i>

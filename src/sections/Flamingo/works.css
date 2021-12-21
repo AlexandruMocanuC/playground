@@ -21,3 +21,8 @@
 .work:hover .overlay h4 {
 	margin-top: 0;
 }
+@media (max-width: 1200px) {
+	.work {
+		height: 350px;
+	}
+}

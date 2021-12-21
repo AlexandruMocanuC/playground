@@ -26,3 +26,8 @@
 	transition: all 0.2s ease-in-out;
 	margin-bottom: calc(var(--space-m) * -1);
 }
+@media (max-width: 1200px) {
+	.team {
+		height: 350px;
+	}
+}

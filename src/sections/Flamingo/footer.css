@@ -37,3 +37,13 @@
 .social-media a:hover {
 	color: var(--green);
 }
+@media (max-width: 1200px) {
+	.footer .menus {
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.footer .menu {
+		width: calc(50% - var(--space-default));
+		margin-bottom: var(--space-l);
+	}
+}

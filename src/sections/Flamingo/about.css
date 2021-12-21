@@ -27,3 +27,8 @@
 	bottom: var(--space-m);
 	position: absolute;
 }
+@media (max-width: 1200px) {
+	.about-section .columns-2 {
+		height: 500px;
+	}
+}

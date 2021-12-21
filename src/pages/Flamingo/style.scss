@@ -137,13 +137,6 @@ span.separator {
 	width: calc(100% / 3 - var(--space-default) * 2 / 3);
 	margin-bottom: var(--space-default);
 }
-.columns-6 {
-	display: flex;
-	flex-wrap: wrap;
-}
-.columns-6 .column {
-	width: calc(100% / 6);
-}
 .p-default {
 	padding: var(--space-default);
 }
@@ -315,4 +308,26 @@ span.separator {
 	right: 0;
 	border-right: 3px solid var(--green);
 	height: 100%;
+}
+
+@media (max-width: 1200px) {
+	:root {
+		--size-xl: 32px;
+		--size-xxl: 60px;
+
+		--container: 800px;
+
+		--space-default: 20px;
+		--space-m: 30px;
+		--space-l: 60px;
+	}
+	.button {
+		padding: 15px 25px;
+	}
+	.columns-4 .column {
+		width: calc(50% - var(--space-default) / 2);
+	}
+	.work-height {
+		height: 500px;
+	}
 }
