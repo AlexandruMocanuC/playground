@@ -74,7 +74,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: {
-                localIdentName: '[hash:base64]',
+                mode: 'global',
               },
               sourceMap: true,
               importLoaders: 1,
@@ -91,7 +91,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: {
-                localIdentName: '[hash:base64]',
+                mode: 'global',
               },
               sourceMap: true,
               importLoaders: 2,

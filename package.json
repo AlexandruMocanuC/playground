@@ -1,10 +1,10 @@
 {
-  "name": "demos",
+  "name": "playground",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://elenapavel.github.io/demos",
-  "repository": "git@github.com:elenapavel/demos.git",
-  "author": "Elena Pavel <elena.pavel.dev@gmail.com>",
+  "homepage": "https://alexandrumocanuc.github.io/playground/",
+  "repository": "git@github.com:AlexandruMocanuC/playground.git",
+  "author": "Alex Mocanu <mocanu.alexandru20@yahoo.ro>",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.2",
