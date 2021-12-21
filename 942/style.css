@@ -1,0 +1,12 @@
+.form input,
+.form textarea {
+	width: 100%;
+	background-color: var(--blue);
+	border: 0 none;
+	padding: var(--space-default);
+	font-family: var(--family-primary);
+	font-size: var(--size-m);
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiOTQyL3N0eWxlLmNzcyIsIm1hcHBpbmdzIjoiQUFBQTs7Q0FFQyxXQUFXO0NBQ1gsNkJBQTZCO0NBQzdCLGNBQWM7Q0FDZCw2QkFBNkI7Q0FDN0Isa0NBQWtDO0NBQ2xDLHdCQUF3QjtBQUN6QiIsInNvdXJjZXMiOlsid2VicGFjazovL3BsYXlncm91bmQvLi9zcmMvY29tcG9uZW50cy9GbGFtaW5nby9mb3JtLmNzcyJdLCJzb3VyY2VzQ29udGVudCI6WyIuZm9ybSBpbnB1dCxcclxuLmZvcm0gdGV4dGFyZWEge1xyXG5cdHdpZHRoOiAxMDAlO1xyXG5cdGJhY2tncm91bmQtY29sb3I6IHZhcigtLWJsdWUpO1xyXG5cdGJvcmRlcjogMCBub25lO1xyXG5cdHBhZGRpbmc6IHZhcigtLXNwYWNlLWRlZmF1bHQpO1xyXG5cdGZvbnQtZmFtaWx5OiB2YXIoLS1mYW1pbHktcHJpbWFyeSk7XHJcblx0Zm9udC1zaXplOiB2YXIoLS1zaXplLW0pO1xyXG59XHJcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==*/
