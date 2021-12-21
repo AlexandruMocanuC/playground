@@ -77,10 +77,8 @@ module.exports = {
                 mode: 'global',
               },
               sourceMap: true,
-              importLoaders: 1,
             },
           },
-          'postcss-loader',
         ],
       },
       {
