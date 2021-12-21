@@ -31,18 +31,6 @@ export const routes = [
 		path: 'contact/',
 		element: <Contact />,
 	},
-	// {
-	// 	path: `works/`,
-	// 	element: <Services />,
-	// },
-	// {
-	// 	path: `blog/`,
-	// 	element: <Services />,
-	// },
-	// {
-	// 	path: `contact-us/`,
-	// 	element: <Services />,
-	// },
 ];
 
 const Flamingo = () => {
