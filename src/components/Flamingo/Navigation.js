@@ -19,19 +19,13 @@ const Navigation = () => {
 					<Link to={base}>home</Link>
 				</div>
 				<div className="menu-item">
-					<Link to={`${base}services`} className="menu-item">
-						services
-					</Link>
+					<Link to={`${base}services`}>services</Link>
 				</div>
 				<div className="menu-item">
-					<Link to={`${base}works`} className="menu-item">
-						works
-					</Link>
+					<Link to={`${base}works`}>works</Link>
 				</div>
 				<div className="menu-item">
-					<Link to={`${base}about`} className="menu-item">
-						about
-					</Link>
+					<Link to={`${base}about`}>about</Link>
 				</div>
 				<div className="menu-item">
 					<a href="#">blog</a>
