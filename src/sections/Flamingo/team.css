@@ -31,3 +31,15 @@
 		height: 350px;
 	}
 }
+@media (max-width: 800px) {
+	.team {
+		flex-wrap: wrap;
+		max-width: var(--container);
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 15px;
+	}
+	.member {
+		width: calc(100% / 3);
+	}
+}

@@ -32,3 +32,8 @@
 		height: 500px;
 	}
 }
+@media (max-width: 800px) {
+	.about-section .columns-2 {
+		height: 350px;
+	}
+}

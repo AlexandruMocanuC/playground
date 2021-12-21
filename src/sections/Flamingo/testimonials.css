@@ -10,7 +10,19 @@
 	border-radius: 50%;
 }
 @media (max-width: 1200px) {
+	.testimonials-section {
+		max-width: var(--container);
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 15px;
+	}
 	.testimonials-section .column {
 		margin-bottom: var(--space-default);
+	}
+}
+@media (max-width: 800px) {
+	.avatar {
+		width: 50px;
+		height: 50px;
 	}
 }

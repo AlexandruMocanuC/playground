@@ -14,7 +14,7 @@ const Navigation = () => {
 					<img src={`${PUBLIC_URL}/images/logo.png`} />
 				</Link>
 			</div>
-			<div className="flex">
+			<div className="flex navigation-menus">
 				<div className="menu">
 					<Link to={base} className="menu-item">
 						home

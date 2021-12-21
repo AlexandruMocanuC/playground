@@ -317,7 +317,6 @@ span.separator {
 
 		--container: 800px;
 
-		--space-default: 20px;
 		--space-m: 30px;
 		--space-l: 60px;
 	}
@@ -329,5 +328,17 @@ span.separator {
 	}
 	.work-height {
 		height: 500px;
+	}
+}
+@media (max-width: 800px) {
+	:root {
+		--size-xl: 24px;
+		--size-xxl: 36px;
+
+		--container: 640px;
+
+		--space-default: 15px;
+		--space-m: 25px;
+		--space-l: 50px;
 	}
 }

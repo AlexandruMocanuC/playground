@@ -39,3 +39,19 @@
 .search a:hover {
 	color: var(--green);
 }
+@media (max-width: 1200px) {
+	.navigation-menus {
+		width: 100%;
+		justify-content: center;
+	}
+	.navigation .logo {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+}
+@media (max-width: 800px) {
+	.navigation {
+		position: absolute;
+	}
+}
