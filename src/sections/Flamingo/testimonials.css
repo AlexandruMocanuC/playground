@@ -1,0 +1,11 @@
+.icon-star {
+	color: var(--yellow);
+	margin: 0 calc(var(--space-default) / 4);
+}
+.avatar {
+	width: 100px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%;
+}

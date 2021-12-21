@@ -1,0 +1,9 @@
+.form input,
+.form textarea {
+	width: 100%;
+	background-color: var(--blue);
+	border: 0 none;
+	padding: var(--space-default);
+	font-family: var(--family-primary);
+	font-size: var(--size-m);
+}

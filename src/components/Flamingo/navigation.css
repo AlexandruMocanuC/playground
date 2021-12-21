@@ -1,0 +1,41 @@
+.navigation {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--space-default) var(--space-l);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--black);
+	z-index: 1;
+}
+.menu-item {
+	color: var(--white);
+	text-transform: uppercase;
+	padding: var(--space-default);
+	transition: all 0.2s ease-in-out;
+	border-bottom: 4px solid transparent;
+	border-radius: var(--radius);
+	font-weight: 700;
+	font-family: var(--family-accent);
+}
+.menu-item:hover {
+	border-bottom: 4px solid var(--green);
+}
+
+.menu .button-small {
+	text-transform: uppercase;
+}
+.logo img {
+	width: 100px;
+}
+
+.search a {
+	padding: var(--space-default);
+	transition: all 0.2s ease-in-out;
+}
+.search a:hover {
+	color: var(--green);
+}

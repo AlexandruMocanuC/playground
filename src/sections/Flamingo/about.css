@@ -1,0 +1,29 @@
+.about-section .columns-2 {
+	height: 640px;
+}
+.about-section .overlay {
+	opacity: 0.5;
+}
+.about-section .column {
+	position: relative;
+}
+.about-section .column:hover > .overlay {
+	opacity: 1;
+}
+.about-section .columns-3 .column {
+	position: relative;
+}
+.about-section .columns-3 .column:not(:nth-child(3n)):before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	border-right: 3px solid var(--green);
+	height: 100%;
+}
+.details {
+	left: var(--space-m);
+	bottom: var(--space-m);
+	position: absolute;
+}

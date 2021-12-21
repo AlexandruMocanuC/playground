@@ -1,0 +1,28 @@
+.team {
+	height: 500px;
+	display: flex;
+}
+.member {
+	height: 100%;
+	flex-grow: 1;
+	filter: grayscale(100%);
+	transition: all 0.2s ease-in-out;
+	position: relative;
+}
+.member:hover {
+	filter: grayscale(0);
+}
+.member:hover .member-details {
+	opacity: 1;
+	margin-bottom: 0;
+}
+.member-details {
+	position: absolute;
+	bottom: var(--space-m);
+	left: 0;
+	right: 0;
+	text-align: center;
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+	margin-bottom: calc(var(--space-m) * -1);
+}

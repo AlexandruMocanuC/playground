@@ -1,0 +1,23 @@
+.works {
+	display: flex;
+}
+.work {
+	height: 500px;
+	transition: width 0.2s linear;
+	position: relative;
+	flex-grow: 1;
+	transition: all 0.2s ease-in-out;
+}
+.work:hover {
+	flex-grow: 3;
+}
+.work:hover .overlay {
+	opacity: 1;
+}
+.work .overlay h4 {
+	margin-top: 100px;
+	transition: all 0.2s ease-in-out;
+}
+.work:hover .overlay h4 {
+	margin-top: 0;
+}

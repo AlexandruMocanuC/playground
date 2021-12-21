@@ -1,0 +1,39 @@
+.footer h5 {
+	color: var(--white);
+}
+.footer .icon-white {
+	font-size: var(--size-l);
+	margin-right: var(--space-default);
+}
+.footer .menu {
+	flex-grow: 1;
+}
+.footer .menu:first-child {
+	flex-grow: 3;
+}
+.footer .menus {
+	display: flex;
+}
+.copyright a {
+	margin-left: var(--space-m);
+	text-transform: uppercase;
+}
+.social-media-small a {
+	margin: 0 calc(var(--space-default) / 2);
+	font-size: var(--size-l);
+	transition: all 0.2s ease-in-out;
+}
+.social-media-small a:hover {
+	color: var(--green);
+}
+.logo {
+	width: 100px;
+}
+.social-media a {
+	margin: 0 var(--space-default);
+	font-size: var(--size-xl);
+	transition: all 0.2s ease-in-out;
+}
+.social-media a:hover {
+	color: var(--green);
+}

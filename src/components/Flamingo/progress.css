@@ -1,0 +1,50 @@
+.progress-bar {
+	width: 100%;
+	position: relative;
+	padding-bottom: var(--space-default);
+	margin-bottom: var(--space-m);
+}
+.progress-bar:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-bottom: 3px solid var(--black);
+}
+.progress-bar-90:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-bottom: 3px solid var(--green);
+	width: 90%;
+}
+.progress-bar-60:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-bottom: 3px solid var(--green);
+	width: 60%;
+}
+.progress-bar-80:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-bottom: 3px solid var(--green);
+	width: 80%;
+}
+.progress-bar-70:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-bottom: 3px solid var(--green);
+	width: 70%;
+}
