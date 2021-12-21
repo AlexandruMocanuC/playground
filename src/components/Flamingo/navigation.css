@@ -11,7 +11,8 @@
 	background-color: var(--black);
 	z-index: 1;
 }
-.menu-item {
+
+.menu-item a {
 	color: var(--white);
 	text-transform: uppercase;
 	padding: var(--space-default);
@@ -21,7 +22,7 @@
 	font-weight: 700;
 	font-family: var(--family-accent);
 }
-.menu-item:hover {
+.menu-item a:hover {
 	border-bottom: 4px solid var(--green);
 }
 
@@ -40,7 +41,7 @@
 	color: var(--green);
 }
 @media (max-width: 1200px) {
-	.navigation-menus {
+	.navigation .menu {
 		width: 100%;
 		justify-content: center;
 	}
@@ -52,6 +53,15 @@
 }
 @media (max-width: 800px) {
 	.navigation {
-		position: absolute;
+		position: relative;
+	}
+	.menu {
+		flex-wrap: wrap;
+	}
+	.menu-item,
+	.search {
+		width: 25%;
+		display: flex;
+		justify-content: center;
 	}
 }

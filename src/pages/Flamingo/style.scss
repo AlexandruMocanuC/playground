@@ -341,4 +341,35 @@ span.separator {
 		--space-m: 25px;
 		--space-l: 50px;
 	}
+	.button {
+		padding: 10px 15px;
+	}
+}
+@media (max-width: 640px) {
+	:root {
+		--size-xxl: 24px;
+		--container: 480px;
+	}
+	.columns-3,
+	.columns-2,
+	.columns-4 {
+		max-width: var(--container);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.columns-3 .column,
+	.columns-2 .column,
+	.columns-4 .column {
+		width: 100%;
+		min-height: 200px;
+	}
+	.header-small {
+		height: 250px;
+	}
+	.width-80 {
+		width: 100%;
+	}
+	.contact-section .columns-3 .column:not(:nth-child(3n)):before {
+		display: none;
+	}
 }

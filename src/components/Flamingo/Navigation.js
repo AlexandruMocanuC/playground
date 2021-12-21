@@ -14,23 +14,29 @@ const Navigation = () => {
 					<img src={`${PUBLIC_URL}/images/logo.png`} />
 				</Link>
 			</div>
-			<div className="flex navigation-menus">
-				<div className="menu">
-					<Link to={base} className="menu-item">
-						home
-					</Link>
+			<div className="menu flex">
+				<div className="menu-item">
+					<Link to={base}>home</Link>
+				</div>
+				<div className="menu-item">
 					<Link to={`${base}services`} className="menu-item">
 						services
 					</Link>
+				</div>
+				<div className="menu-item">
 					<Link to={`${base}works`} className="menu-item">
 						works
 					</Link>
+				</div>
+				<div className="menu-item">
 					<Link to={`${base}about`} className="menu-item">
 						about
 					</Link>
-					<a href="#" className="menu-item">
-						blog
-					</a>
+				</div>
+				<div className="menu-item">
+					<a href="#">blog</a>
+				</div>
+				<div>
 					<Link to={`${base}contact`} className="button">
 						contact
 					</Link>

@@ -37,3 +37,11 @@
 		height: 350px;
 	}
 }
+@media (max-width: 640px) {
+	.about-section .columns-2 {
+		display: none;
+	}
+	.about-section .columns-3 .column:not(:nth-child(3n)):before {
+		display: none;
+	}
+}

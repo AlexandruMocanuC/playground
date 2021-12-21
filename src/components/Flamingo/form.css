@@ -7,3 +7,8 @@
 	font-family: var(--family-primary);
 	font-size: var(--size-m);
 }
+@media (max-width: 640px) {
+	.form .column {
+		min-height: auto;
+	}
+}

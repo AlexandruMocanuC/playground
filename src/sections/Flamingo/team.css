@@ -33,6 +33,7 @@
 }
 @media (max-width: 800px) {
 	.team {
+		height: auto;
 		flex-wrap: wrap;
 		max-width: var(--container);
 		margin-left: auto;
@@ -40,6 +41,7 @@
 		padding: 0 15px;
 	}
 	.member {
+		height: 350px;
 		width: calc(100% / 3);
 	}
 }
