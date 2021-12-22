@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-
+import { footer } from './db';
 import { Link } from 'react-router-dom';
 
 import { base, PUBLIC_URL } from '~/constants/flamingo';
@@ -14,26 +14,19 @@ const Footer = () => {
 			<div
 				className="section text-center bg-cover bg-fixed"
 				style={{
-					backgroundImage: `url(${PUBLIC_URL}/images/background-footer.jpg)`,
+					backgroundImage: footer.inquiry.image,
 				}}
 			>
 				<div className="social-media mb-m">
-					<a href="https://facebook.com">
-						<i className="fab fa-facebook"></i>
-					</a>
-					<a href="https://twitter.com">
-						<i className="fab fa-twitter"></i>
-					</a>
-					<a href="https://instagram.com">
-						<i className="fab fa-instagram"></i>
-					</a>
-					<a href="https://youtube.com">
-						<i className="fab fa-youtube"></i>
-					</a>
+					{footer.inquiry.socialMedia.map((item, index) => (
+						<a href={item.link} key={index}>
+							<i className={item.icon}></i>
+						</a>
+					))}
 				</div>
-				<h2 className="mb-m">Have any project in mind?</h2>
+				<h2 className="mb-m">{footer.inquiry.heading}</h2>
 				<a href="#" className="button">
-					make inquiry
+					{footer.inquiry.button.text}
 				</a>
 			</div>
 			<div className="bg-blue section bb-white">
@@ -41,85 +34,124 @@ const Footer = () => {
 					<div className="menus">
 						<div className="menu">
 							<div className="logo mb-default">
-								<Link to={base}>
-									<img
-										src={`${PUBLIC_URL}/images/logo.png`}
-									/>
+								<Link to={footer.menus.menu1.logo.link}>
+									<img src={footer.menus.menu1.logo.image} />
 								</Link>
 							</div>
-							<p>We are more than a digital agency</p>
+							<p>{footer.menus.menu1.description}</p>
 							<div className="separator"></div>
 						</div>
 						<div className="menu">
 							<h5 className="mb-default">Contact Us</h5>
 							<div>
-								<a href="tel:0727729068" className="mb-default">
-									<i className="fas fa-phone-volume icon-white"></i>
-									0727729068
+								<a
+									href={
+										footer.menus.menu2.buttons.button1.link
+									}
+									className="mb-default"
+								>
+									<i
+										className={
+											footer.menus.menu2.buttons.button1
+												.icon
+										}
+									></i>
+									{footer.menus.menu2.buttons.button1.text}
 								</a>
 							</div>
 							<div>
 								<a
-									href="mailto:mocanu.alexandru20@yahoo.ro"
+									href={
+										footer.menus.menu2.buttons.button2.link
+									}
 									className="mb-default"
 								>
-									<i className="far fa-envelope icon-white"></i>
-									mocanu.alexandru20@yahoo.ro
+									<i
+										className={
+											footer.menus.menu2.buttons.button2
+												.icon
+										}
+									></i>
+									{footer.menus.menu2.buttons.button2.text}
 								</a>
 							</div>
 							<div className="mb-default">
-								<i className="fas fa-map-marker-alt icon-white"></i>
-								Constantza, Romania
+								<i
+									className={
+										footer.menus.menu2.buttons.button3.icon
+									}
+								></i>
+								{footer.menus.menu2.buttons.button3.text}
 							</div>
 							<div>
-								<i className="far fa-calendar-alt icon-white"></i>
-								Monday to Friday
-							</div>
-						</div>
-						<div className="menu">
-							<h5 className="mb-default">Our Services</h5>
-							<div>
-								<a href="#" className="mb-default">
-									Link nb.1
-								</a>
-							</div>
-							<div>
-								<a href="#" className="mb-default">
-									Link nb.2
-								</a>
-							</div>
-							<div>
-								<a href="#" className="mb-default">
-									Link nb.3
-								</a>
-							</div>
-							<div>
-								<a href="#" className="mb-default">
-									Link nb.4
-								</a>
+								<i
+									className={
+										footer.menus.menu2.buttons.button4.icon
+									}
+								></i>
+								{footer.menus.menu2.buttons.button4.text}
 							</div>
 						</div>
 						<div className="menu">
-							<h5 className="mb-default">About Us</h5>
+							<h5 className="mb-default">
+								{footer.menus.menu3.heading}
+							</h5>
 							<div>
 								<a href="#" className="mb-default">
-									About
+									{footer.menus.menu3.buttons.button1.text}
 								</a>
 							</div>
 							<div>
 								<a href="#" className="mb-default">
-									Blog
+									{footer.menus.menu3.buttons.button2.text}
 								</a>
 							</div>
 							<div>
 								<a href="#" className="mb-default">
-									Contact us 1
+									{footer.menus.menu3.buttons.button3.text}
 								</a>
 							</div>
 							<div>
 								<a href="#" className="mb-default">
-									Contact us 2
+									{footer.menus.menu3.buttons.button4.text}
 								</a>
+							</div>
+						</div>
+						<div className="menu">
+							<h5 className="mb-default">
+								{footer.menus.menu4.heading}
+							</h5>
+							<div>
+								<Link
+									to={footer.menus.menu4.buttons.button1.link}
+									className="mb-default"
+								>
+									{footer.menus.menu4.buttons.button1.text}
+								</Link>
+							</div>
+							<div>
+								<Link
+									to={footer.menus.menu4.buttons.button2.link}
+									className="mb-default"
+								>
+									{footer.menus.menu4.buttons.button2.text}
+								</Link>
+							</div>
+							<div>
+								<Link
+									to={footer.menus.menu4.buttons.button3.link}
+									className="mb-default"
+								>
+									{footer.menus.menu4.buttons.button3.text}
+								</Link>
+							</div>
+							<div>
+								<Link
+									to={footer.menus.menu4.buttons.button4.link}
+									className="mb-default"
+								>
+									{footer.menus.menu4.buttons.button4.text}
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -128,28 +160,52 @@ const Footer = () => {
 			<div className="bg-blue py-m">
 				<div className="container">
 					<div className="copyright mb-default flex">
-						<p>Copyright 2020 All rights reserved</p>
-						<a href="#">Privacy Policy</a>
-						<a href="#">Terms of Use</a>
+						<p>{footer.copyright.text}</p>
+						<a href="#">{footer.copyright.buttons.button1.text}</a>
+						<a href="#">{footer.copyright.buttons.button2.text}</a>
 					</div>
 					<div className="flex-between">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit. Ut elit tellus, luctus nec ullamcorper mattis,
-							pulvinar dapibus leo.
-						</p>
+						<p>{footer.copyright.description}</p>
 						<div className="social-media-small">
-							<a href="https://facebook.com">
-								<i className="fab fa-facebook"></i>
+							<a
+								href={
+									footer.copyright.socialMedia.facebook.link
+								}
+							>
+								<i
+									className={
+										footer.copyright.socialMedia.facebook
+											.icon
+									}
+								></i>
 							</a>
-							<a href="https://twitter.com">
-								<i className="fab fa-twitter"></i>
+							<a href={footer.copyright.socialMedia.twitter.link}>
+								<i
+									className={
+										footer.copyright.socialMedia.twitter
+											.icon
+									}
+								></i>
 							</a>
-							<a href="https://instagram.com">
-								<i className="fab fa-instagram"></i>
+							<a
+								href={
+									footer.copyright.socialMedia.instagram.link
+								}
+							>
+								<i
+									className={
+										footer.copyright.socialMedia.instagram
+											.icon
+									}
+								></i>
 							</a>
-							<a href="https://youtube.com">
-								<i className="fab fa-youtube"></i>
+							<a href={footer.copyright.socialMedia.youtube.link}>
+								<i
+									className={
+										footer.copyright.socialMedia.youtube
+											.icon
+									}
+								></i>
 							</a>
 						</div>
 					</div>

@@ -3,6 +3,7 @@ import React from 'react';
 import Progress from '~c/Flamingo/Progress.js';
 import Perks from '~s/Flamingo/Perks.js';
 import Team from '~s/Flamingo/Team.js';
+import { about } from './db';
 
 import { PUBLIC_URL } from '~/constants/flamingo';
 
@@ -11,11 +12,11 @@ const AboutPage = () => (
 		<div
 			className="header-small bg-cover"
 			style={{
-				backgroundImage: `url(${PUBLIC_URL}/images/about/office.jpg)`,
+				backgroundImage: about.header.image,
 			}}
 		>
 			<div className="text-center">
-				<h1>About us.</h1>
+				<h1>{about.header.heading}</h1>
 			</div>
 		</div>
 		<div className="bg-blue section">
@@ -28,21 +29,15 @@ const AboutPage = () => (
 				<div className="columns-2">
 					<div className="column">
 						<div className="width-80">
-							<h2 className="mb-m">
-								Here are some of our great skills
-							</h2>
-							<p className="mb-m">
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit. Cras id arcu luctus,
-								pellentesque lorem ac, pharetra sapien.{' '}
-							</p>
+							<h2 className="mb-m">{about.skills.heading}</h2>
+							<p className="mb-m">{about.skills.description}</p>
 							<Progress />
 						</div>
 					</div>
 					<div
 						className="column bg-cover"
 						style={{
-							backgroundImage: `url(${PUBLIC_URL}/images/about/phone.jpg)`,
+							backgroundImage: about.skills.image,
 						}}
 					></div>
 				</div>
@@ -54,25 +49,16 @@ const AboutPage = () => (
 					<div
 						className="column bg-cover"
 						style={{
-							backgroundImage: `url(${PUBLIC_URL}/images/services/laptop.jpg)`,
+							backgroundImage: about.video.image,
 						}}
 					></div>
 					<div className="column">
 						<div className="p-m">
-							<h2 className="mb-m">
-								Best Solutions for Your Business
-							</h2>
-							<p className="mb-m">
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit. Aliquam sit amet urna quis odio
-								vehicula consectetur. Donec eu gravida diam.
-								Aenean accumsan nisl sed fringilla sollicitudin.
-								Donec tincidunt quis dolor eget consectetur.
-								Suspendisse a mollis lacus.
-							</p>
+							<h2 className="mb-m">{about.video.heading}</h2>
+							<p className="mb-m">{about.video.description}</p>
 							<a href="#" className="button">
 								<i className="fas fa-play mr-default"></i>
-								Watch video
+								{about.video.button.text}
 							</a>
 						</div>
 					</div>
@@ -82,9 +68,10 @@ const AboutPage = () => (
 		<div className="bg-grey section">
 			<div className="container mb-l">
 				<h2 className="mb-default">
-					<span className="separator"></span>Meet our team.
+					<span className="separator"></span>
+					{about.team.heading}
 				</h2>
-				<h5>the best people to support your project</h5>
+				<h5>{about.team.description}</h5>
 			</div>
 			<Team />
 		</div>
