@@ -58,41 +58,28 @@ export const footer = {
 		},
 		menu3: {
 			heading: 'Our Services',
-			buttons: {
-				button1: {
-					text: 'Link nb.1',
-				},
-				button2: {
-					text: 'Link nb.2',
-				},
-				button3: {
-					text: 'Link nb.3',
-				},
-				button4: {
-					text: 'Link nb.4',
-				},
-			},
+			buttons: ['link1', 'link2', 'link3', 'link4'],
 		},
 		menu4: {
 			heading: 'About Us',
-			buttons: {
-				button1: {
+			buttons: [
+				{
 					text: 'About',
 					link: base + 'about',
 				},
-				button2: {
+				{
 					text: 'Blog',
 					link: base + '#',
 				},
-				button3: {
+				{
 					text: 'Contact us',
 					link: base + 'contact',
 				},
-				button4: {
+				{
 					text: 'Works',
 					link: base + 'works',
 				},
-			},
+			],
 		},
 	},
 	copyright: {
@@ -107,24 +94,24 @@ export const footer = {
 		},
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
-		socialMedia: {
-			facebook: {
+		socialMedia: [
+			{
 				link: 'https://facebook.com',
 				icon: 'fab fa-facebook',
 			},
-			twitter: {
+			{
 				link: 'https://twitter.com',
 				icon: 'fab fa-twitter',
 			},
-			instagram: {
+			{
 				link: 'https://instagram.com',
 				icon: 'fab fa-instagram',
 			},
-			youtube: {
+			{
 				link: 'https://youtube.com',
 				icon: 'fab fa-youtube',
 			},
-		},
+		],
 	},
 };
 export const about = {
@@ -163,3 +150,219 @@ export const about = {
 		},
 	],
 };
+export const testimonials = [
+	{
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat bibendum turpis sit amet pretium. Nunc ut dui ornare, vulputate augue sed, varius velit.',
+		avatar: `url(${PUBLIC_URL}/images/avatar.jpg)`,
+		name: 'John Doe',
+		position: 'Web developer',
+	},
+	{
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat bibendum turpis sit amet pretium. Nunc ut dui ornare, vulputate augue sed, varius velit.',
+		avatar: `url(${PUBLIC_URL}/images/avatar.jpg)`,
+		name: 'John Doe',
+		position: 'Web developer',
+	},
+	{
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat bibendum turpis sit amet pretium. Nunc ut dui ornare, vulputate augue sed, varius velit.',
+		avatar: `url(${PUBLIC_URL}/images/avatar.jpg)`,
+		name: 'John Doe',
+		position: 'Web developer',
+	},
+	{
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat bibendum turpis sit amet pretium. Nunc ut dui ornare, vulputate augue sed, varius velit.',
+		avatar: `url(${PUBLIC_URL}/images/avatar.jpg)`,
+		name: 'John Doe',
+		position: 'Web developer',
+	},
+];
+export const works = [
+	{
+		image: `url(${PUBLIC_URL}/images/watch.jpg)`,
+		name: 'Smart Watch',
+	},
+	{
+		image: `url(${PUBLIC_URL}/images/watch2.jpg)`,
+		name: 'UX Design',
+	},
+	{
+		image: `url(${PUBLIC_URL}/images/headphone.jpg)`,
+		name: 'Mockup',
+	},
+	{
+		image: `url(${PUBLIC_URL}/images/mac.jpg)`,
+		name: 'The UI Design',
+	},
+	{
+		image: `url(${PUBLIC_URL}/images/watch3.jpg)`,
+		name: 'One Product',
+	},
+	{
+		image: `url(${PUBLIC_URL}/images/flamingos.jpg)`,
+		name: 'The UX Designs',
+	},
+];
+export const perks = [
+	{
+		icon: 'fas fa-chart-bar icon-green mb-default',
+		heading: 'Excellent Design',
+		description:
+			'Vivamus at vehicula justo hendrerit euismod ante. Suspendisse egestas efficitur euismod.',
+	},
+	{
+		icon: 'fas fa-pen icon-green mb-default',
+		heading: 'Fast Response',
+		description:
+			'Vivamus at vehicula justo hendrerit euismod ante. Suspendisse egestas efficitur euismod.',
+	},
+	{
+		icon: 'fas fa-user-friends icon-green mb-default',
+		heading: 'Time Saving',
+		description:
+			'Vivamus at vehicula justo hendrerit euismod ante. Suspendisse egestas efficitur euismod.',
+	},
+	{
+		icon: 'fas fa-globe-europe icon-green mb-default',
+		heading: 'Personal Support',
+		description:
+			'Vivamus at vehicula justo hendrerit euismod ante. Suspendisse egestas efficitur euismod.',
+	},
+	{
+		icon: 'far fa-bookmark icon-green mb-default',
+		heading: 'Best Quality',
+		description:
+			'Vivamus at vehicula justo hendrerit euismod ante. Suspendisse egestas efficitur euismod.',
+	},
+	{
+		icon: 'fas fa-chart-area icon-green mb-default',
+		heading: 'Perfect Solutions',
+		description:
+			'Vivamus at vehicula justo hendrerit euismod ante. Suspendisse egestas efficitur euismod.',
+	},
+];
+export const news = [
+	{
+		image: `url(${PUBLIC_URL}/images/vr.jpg)`,
+		heading:
+			'Could this VR sketching tool be coming of age for designers in the future?',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt....',
+		button: '#',
+	},
+	{
+		image: `url(${PUBLIC_URL}/images/design.jpg)`,
+		heading:
+			'8 Cities That Show You What The Future Will Look Like (Innovative Ideas)',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt....',
+		button: '#',
+	},
+	{
+		image: `url(${PUBLIC_URL}/images/thanks.jpg)`,
+		heading: '15 Gift Ideas for Mom and Dad. Wherever They Are This Year',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt....',
+		button: '#',
+	},
+];
+export const team = [
+	{
+		image: `url(${PUBLIC_URL}/images/about/member1.jpg)`,
+		name: 'John Doe',
+		position: 'Web developer',
+		socialMedia: [
+			{
+				link: 'https://facebook.com',
+				icon: 'fab fa-facebook-f',
+			},
+			{
+				link: 'https://intagram.com',
+				icon: 'fab fa-instagram',
+			},
+			{
+				link: 'https:linkedin.com',
+				icon: 'fab fa-linkedin-in',
+			},
+		],
+	},
+	{
+		image: `url(${PUBLIC_URL}/images/about/member2.jpg)`,
+		name: 'John Doe',
+		position: 'Web developer',
+		socialMedia: [
+			{
+				link: 'https://facebook.com',
+				icon: 'fab fa-facebook-f',
+			},
+			{
+				link: 'https://intagram.com',
+				icon: 'fab fa-instagram',
+			},
+			{
+				link: 'https:linkedin.com',
+				icon: 'fab fa-linkedin-in',
+			},
+		],
+	},
+	{
+		image: `url(${PUBLIC_URL}/images/about/member3.jpg)`,
+		name: 'John Doe',
+		position: 'Web developer',
+		socialMedia: [
+			{
+				link: 'https://facebook.com',
+				icon: 'fab fa-facebook-f',
+			},
+			{
+				link: 'https://intagram.com',
+				icon: 'fab fa-instagram',
+			},
+			{
+				link: 'https:linkedin.com',
+				icon: 'fab fa-linkedin-in',
+			},
+		],
+	},
+	{
+		image: `url(${PUBLIC_URL}/images/about/member4.jpg)`,
+		name: 'John Doe',
+		position: 'Web developer',
+		socialMedia: [
+			{
+				link: 'https://facebook.com',
+				icon: 'fab fa-facebook-f',
+			},
+			{
+				link: 'https://intagram.com',
+				icon: 'fab fa-instagram',
+			},
+			{
+				link: 'https:linkedin.com',
+				icon: 'fab fa-linkedin-in',
+			},
+		],
+	},
+	{
+		image: `url(${PUBLIC_URL}/images/about/member5.jpg)`,
+		name: 'John Doe',
+		position: 'Web developer',
+		socialMedia: [
+			{
+				link: 'https://facebook.com',
+				icon: 'fab fa-facebook-f',
+			},
+			{
+				link: 'https://intagram.com',
+				icon: 'fab fa-instagram',
+			},
+			{
+				link: 'https:linkedin.com',
+				icon: 'fab fa-linkedin-in',
+			},
+		],
+	},
+];

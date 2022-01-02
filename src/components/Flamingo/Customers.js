@@ -1,13 +1,10 @@
 import React from 'react';
+import { customers } from './db';
 const Customers = () => (
 	<div className="flex-between">
-		<i className="fab fa-jedi-order icon-white"></i>
-		<i className="fas fa-star-of-life icon-white"></i>
-		<i className="fas fa-store-alt icon-white"></i>
-		<i className="fas fa-share-alt-square icon-white"></i>
-		<i className="fas fa-poo-storm icon-white"></i>
-		<i className="fas fa-charging-station icon-white"></i>
-		<i className="fas fa-snowplow icon-white"></i>
+		{customers.map((item, index) => (
+			<i className={item} key={index}></i>
+		))}
 	</div>
 );
 export default Customers;

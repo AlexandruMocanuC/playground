@@ -4,7 +4,6 @@ import Services from '~s/Flamingo/Services.js';
 import Progress from '~c/Flamingo/Progress.js';
 import { services } from './db';
 
-import { PUBLIC_URL } from '~/constants/flamingo';
 import { Link } from 'react-router-dom';
 
 const ServicesPage = () => (

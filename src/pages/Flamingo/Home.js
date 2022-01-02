@@ -10,7 +10,6 @@ import Services from '~s/Flamingo/Services.js';
 import Services2 from '~c/Flamingo/Services2.js';
 import Customers from '~c/Flamingo/Customers.js';
 
-import { PUBLIC_URL, base } from '~/constants/flamingo';
 import { home } from './db';
 
 const FlamingoHome = () => (

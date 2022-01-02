@@ -52,48 +52,48 @@ export const works = {
 	content: {
 		heading: 'Our Works.',
 		description: 'See all our works',
-		columns: {
-			column1: {
+		columns: [
+			{
 				image: `url(${PUBLIC_URL}/images/works/item1.jpg)`,
 				heading: 'Arhitecture',
 			},
-			column2: {
+			{
 				image: `url(${PUBLIC_URL}/images/works/item2.jpg)`,
 				heading: 'Photography',
 			},
-			column3: {
+			{
 				image: `url(${PUBLIC_URL}/images/works/item3.jpg)`,
 				heading: 'Teaser',
 			},
-			column4: {
+			{
 				image: `url(${PUBLIC_URL}/images/works/item4.jpg)`,
 				heading: 'Styles',
 			},
-			column5: {
+			{
 				image: `url(${PUBLIC_URL}/images/works/item5.jpg)`,
 				heading: 'About',
 			},
-			column6: {
+			{
 				image: `url(${PUBLIC_URL}/images/works/item6.jpg)`,
 				heading: 'Names',
 			},
-			column7: {
+			{
 				image: `url(${PUBLIC_URL}/images/works/item7.jpg)`,
 				heading: 'Titles',
 			},
-			column8: {
+			{
 				image: `url(${PUBLIC_URL}/images/works/item8.jpg)`,
 				heading: 'Something',
 			},
-			column9: {
+			{
 				image: `url(${PUBLIC_URL}/images/works/item9.jpg)`,
 				heading: 'Reaction',
 			},
-			column10: {
+			{
 				image: `url(${PUBLIC_URL}/images/works/item10.jpg)`,
 				heading: 'Miscelanious',
 			},
-		},
+		],
 	},
 };
 export const about = {

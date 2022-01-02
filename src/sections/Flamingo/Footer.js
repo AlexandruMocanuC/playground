@@ -96,63 +96,28 @@ const Footer = () => {
 							<h5 className="mb-default">
 								{footer.menus.menu3.heading}
 							</h5>
-							<div>
-								<a href="#" className="mb-default">
-									{footer.menus.menu3.buttons.button1.text}
-								</a>
-							</div>
-							<div>
-								<a href="#" className="mb-default">
-									{footer.menus.menu3.buttons.button2.text}
-								</a>
-							</div>
-							<div>
-								<a href="#" className="mb-default">
-									{footer.menus.menu3.buttons.button3.text}
-								</a>
-							</div>
-							<div>
-								<a href="#" className="mb-default">
-									{footer.menus.menu3.buttons.button4.text}
-								</a>
-							</div>
+							{footer.menus.menu3.buttons.map((button, index) => (
+								<div key={index}>
+									<a href="#" className="mb-default">
+										{button}
+									</a>
+								</div>
+							))}
 						</div>
 						<div className="menu">
 							<h5 className="mb-default">
 								{footer.menus.menu4.heading}
 							</h5>
-							<div>
-								<Link
-									to={footer.menus.menu4.buttons.button1.link}
-									className="mb-default"
-								>
-									{footer.menus.menu4.buttons.button1.text}
-								</Link>
-							</div>
-							<div>
-								<Link
-									to={footer.menus.menu4.buttons.button2.link}
-									className="mb-default"
-								>
-									{footer.menus.menu4.buttons.button2.text}
-								</Link>
-							</div>
-							<div>
-								<Link
-									to={footer.menus.menu4.buttons.button3.link}
-									className="mb-default"
-								>
-									{footer.menus.menu4.buttons.button3.text}
-								</Link>
-							</div>
-							<div>
-								<Link
-									to={footer.menus.menu4.buttons.button4.link}
-									className="mb-default"
-								>
-									{footer.menus.menu4.buttons.button4.text}
-								</Link>
-							</div>
+							{footer.menus.menu4.buttons.map((button, index) => (
+								<div key={index}>
+									<Link
+										to={button.link}
+										className="mb-default"
+									>
+										{button.text}
+									</Link>
+								</div>
+							))}
 						</div>
 					</div>
 				</div>
@@ -167,46 +132,11 @@ const Footer = () => {
 					<div className="flex-between">
 						<p>{footer.copyright.description}</p>
 						<div className="social-media-small">
-							<a
-								href={
-									footer.copyright.socialMedia.facebook.link
-								}
-							>
-								<i
-									className={
-										footer.copyright.socialMedia.facebook
-											.icon
-									}
-								></i>
-							</a>
-							<a href={footer.copyright.socialMedia.twitter.link}>
-								<i
-									className={
-										footer.copyright.socialMedia.twitter
-											.icon
-									}
-								></i>
-							</a>
-							<a
-								href={
-									footer.copyright.socialMedia.instagram.link
-								}
-							>
-								<i
-									className={
-										footer.copyright.socialMedia.instagram
-											.icon
-									}
-								></i>
-							</a>
-							<a href={footer.copyright.socialMedia.youtube.link}>
-								<i
-									className={
-										footer.copyright.socialMedia.youtube
-											.icon
-									}
-								></i>
-							</a>
+							{footer.copyright.socialMedia.map((item, index) => (
+								<a href={item.link} key={index}>
+									<i className={item.icon}></i>
+								</a>
+							))}
 						</div>
 					</div>
 				</div>
