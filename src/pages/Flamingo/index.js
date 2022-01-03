@@ -12,6 +12,8 @@ import Services from './Services';
 import About from './About';
 import Works from './Works';
 import Contact from './Contact';
+import Blog from './Blog';
+import Article from './Article';
 
 export const routes = [
 	{ index: true, element: <Home /> },
@@ -30,6 +32,14 @@ export const routes = [
 	{
 		path: 'contact/',
 		element: <Contact />,
+	},
+	{
+		path: 'blog/',
+		element: <Blog />,
+	},
+	{
+		path: 'article/',
+		element: <Article />,
 	},
 ];
 

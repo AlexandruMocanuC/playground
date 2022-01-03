@@ -1,5 +1,6 @@
 import React from 'react';
 import { news } from './db';
+import Card from './Card';
 
 const News = () => (
 	<div className="bg-blue section">
@@ -9,23 +10,7 @@ const News = () => (
 		</div>
 		<div className="columns-3">
 			{news.map((item, index) => (
-				<div className="column b-white" key={index}>
-					<div className="w-100">
-						<div
-							className="pt-100 bg-cover"
-							style={{
-								backgroundImage: item.image,
-							}}
-						></div>
-					</div>
-					<div className="p-default">
-						<p className="mb-default">{item.heading}</p>
-						<p className="mb-default">{item.description}</p>
-						<a href={item.button} className="button-small">
-							read more
-						</a>
-					</div>
-				</div>
+				<Card item={item} key={index} />
 			))}
 		</div>
 	</div>

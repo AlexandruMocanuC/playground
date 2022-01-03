@@ -24,6 +24,45 @@ export const home = {
 		description: 'We are more than digital agency',
 	},
 };
+export const customers = [
+	'fab fa-jedi-order icon-white',
+	'fas fa-star-of-life icon-white',
+	'fas fa-store-alt icon-white',
+	'fas fa-share-alt-square icon-white',
+	'fas fa-poo-storm icon-white',
+	'fas fa-charging-station icon-white',
+	'fas fa-snowplow icon-white',
+];
+export const testimonials = [
+	{
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat bibendum turpis sit amet pretium. Nunc ut dui ornare, vulputate augue sed, varius velit.',
+		avatar: `url(${PUBLIC_URL}/images/avatar.jpg)`,
+		name: 'John Doe',
+		position: 'Web developer',
+	},
+	{
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat bibendum turpis sit amet pretium. Nunc ut dui ornare, vulputate augue sed, varius velit.',
+		avatar: `url(${PUBLIC_URL}/images/avatar.jpg)`,
+		name: 'John Doe',
+		position: 'Web developer',
+	},
+	{
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat bibendum turpis sit amet pretium. Nunc ut dui ornare, vulputate augue sed, varius velit.',
+		avatar: `url(${PUBLIC_URL}/images/avatar.jpg)`,
+		name: 'John Doe',
+		position: 'Web developer',
+	},
+	{
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat bibendum turpis sit amet pretium. Nunc ut dui ornare, vulputate augue sed, varius velit.',
+		avatar: `url(${PUBLIC_URL}/images/avatar.jpg)`,
+		name: 'John Doe',
+		position: 'Web developer',
+	},
+];
 export const services = {
 	header: {
 		image: `url(${PUBLIC_URL}/images/services/header-bg.jpg)`,
@@ -164,5 +203,147 @@ export const contact = {
 	form: {
 		heading: 'Send us a message!',
 		description: 'Lorem ipsum dolor sit amet',
+	},
+};
+export const blog = {
+	header: {
+		image: `url(${PUBLIC_URL}/images/pen.jpg)`,
+		heading: 'Blog.',
+	},
+	heading: 'Check our latest news.',
+	description: 'Check Out Some of Our News',
+	articles: [
+		{
+			image: `url(${PUBLIC_URL}/images/vr.jpg)`,
+			heading:
+				'Could this VR sketching tool be coming of age for designers in the future?',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt....',
+			button: `${base}article`,
+		},
+		{
+			image: `url(${PUBLIC_URL}/images/design.jpg)`,
+			heading:
+				'8 Cities That Show You What The Future Will Look Like (Innovative Ideas)',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt....',
+			button: `${base}article`,
+		},
+		{
+			image: `url(${PUBLIC_URL}/images/thanks.jpg)`,
+			heading:
+				'15 Gift Ideas for Mom and Dad. Wherever They Are This Year',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt....',
+			button: `${base}article`,
+		},
+		{
+			image: `url(${PUBLIC_URL}/images/vr.jpg)`,
+			heading:
+				'Could this VR sketching tool be coming of age for designers in the future?',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt....',
+			button: `${base}article`,
+		},
+		{
+			image: `url(${PUBLIC_URL}/images/design.jpg)`,
+			heading:
+				'8 Cities That Show You What The Future Will Look Like (Innovative Ideas)',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt....',
+			button: `${base}article`,
+		},
+		{
+			image: `url(${PUBLIC_URL}/images/thanks.jpg)`,
+			heading:
+				'15 Gift Ideas for Mom and Dad. Wherever They Are This Year',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt....',
+			button: `${base}article`,
+		},
+	],
+};
+export const article = {
+	header: {
+		category: 'Technology',
+		heading:
+			'Could this VR sketching tool be coming of age for designers in the future?',
+		image: `url(${PUBLIC_URL}/images/vr.jpg)`,
+	},
+	content: {
+		sidebar: {
+			details: [
+				{
+					heading: 'Written by',
+					description: 'John Doe',
+				},
+				{
+					heading: 'Posted on',
+					description: 'January 3, 2022',
+				},
+				{
+					heading: 'Tags',
+					description: 'Design, Technology',
+				},
+			],
+			socialMedia: [
+				{
+					link: 'https://facebook.com',
+					icon: 'fab fa-facebook',
+				},
+				{
+					link: 'https://twitter.com',
+					icon: 'fab fa-twitter',
+				},
+				{
+					link: 'https://instagram.com',
+					icon: 'fab fa-instagram',
+				},
+			],
+		},
+		main: [
+			{
+				type: 'description',
+				content:
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in posuere metus. Donec dictum tempor odio, sit amet condimentum odio mollis nec. Praesent eget ligula neque. Quisque pharetra elementum massa at fringilla.',
+			},
+			{
+				type: 'paragraph',
+				content:
+					'Etiam ultrices ex nec interdum luctus. Sed tincidunt nisl sed arcu sodales elementum. Etiam ac justo vitae dolor tincidunt efficitur eget at tellus. Quisque tristique volutpat nulla, eu bibendum est malesuada a.',
+			},
+			{
+				type: 'heading',
+				content: 'The New Generation of VR is Coming!',
+			},
+			{
+				type: 'paragraph',
+				content:
+					'Etiam ultrices ex nec interdum luctus. Sed tincidunt nisl sed arcu sodales elementum. Etiam ac justo vitae dolor tincidunt efficitur eget at tellus. Quisque tristique volutpat nulla, eu bibendum est malesuada a.',
+			},
+			{
+				type: 'image',
+				content: `${PUBLIC_URL}/images/vr.jpg`,
+			},
+			{
+				type: 'paragraph',
+				content:
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in posuere metus. Donec dictum tempor odio, sit amet condimentum odio mollis nec. Praesent eget ligula neque. Quisque pharetra elementum massa at fringilla. Nullam fringilla nec augue id sollicitudin. Quisque interdum lobortis tortor, sit amet aliquam urna aliquam in. Morbi in quam a tellus tempor tincidunt sed vitae eros.',
+			},
+			{
+				type: 'paragraph',
+				content:
+					'Etiam ultrices ex nec interdum luctus. Sed tincidunt nisl sed arcu sodales elementum. Etiam ac justo vitae dolor tincidunt efficitur eget at tellus. Quisque tristique volutpat nulla, eu bibendum est malesuada a. Quisque suscipit, felis ut congue molestie, eros dolor mattis dolor, a sagittis sem ligula vitae dui. Sed pellentesque sagittis tincidunt. ',
+			},
+			{
+				type: 'heading',
+				content:
+					'"Your time is limited, so don\'t waste it living someone else\'s life."',
+			},
+			{
+				type: 'paragraph',
+				content: ' Steve Jobs | Ex CEO of Apple ',
+			},
+		],
 	},
 };

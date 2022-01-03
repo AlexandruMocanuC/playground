@@ -150,36 +150,7 @@ export const about = {
 		},
 	],
 };
-export const testimonials = [
-	{
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat bibendum turpis sit amet pretium. Nunc ut dui ornare, vulputate augue sed, varius velit.',
-		avatar: `url(${PUBLIC_URL}/images/avatar.jpg)`,
-		name: 'John Doe',
-		position: 'Web developer',
-	},
-	{
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat bibendum turpis sit amet pretium. Nunc ut dui ornare, vulputate augue sed, varius velit.',
-		avatar: `url(${PUBLIC_URL}/images/avatar.jpg)`,
-		name: 'John Doe',
-		position: 'Web developer',
-	},
-	{
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat bibendum turpis sit amet pretium. Nunc ut dui ornare, vulputate augue sed, varius velit.',
-		avatar: `url(${PUBLIC_URL}/images/avatar.jpg)`,
-		name: 'John Doe',
-		position: 'Web developer',
-	},
-	{
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat bibendum turpis sit amet pretium. Nunc ut dui ornare, vulputate augue sed, varius velit.',
-		avatar: `url(${PUBLIC_URL}/images/avatar.jpg)`,
-		name: 'John Doe',
-		position: 'Web developer',
-	},
-];
+
 export const works = [
 	{
 		image: `url(${PUBLIC_URL}/images/watch.jpg)`,
@@ -251,7 +222,7 @@ export const news = [
 			'Could this VR sketching tool be coming of age for designers in the future?',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt....',
-		button: '#',
+		button: `${base}article`,
 	},
 	{
 		image: `url(${PUBLIC_URL}/images/design.jpg)`,
@@ -259,14 +230,14 @@ export const news = [
 			'8 Cities That Show You What The Future Will Look Like (Innovative Ideas)',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt....',
-		button: '#',
+		button: `${base}article`,
 	},
 	{
 		image: `url(${PUBLIC_URL}/images/thanks.jpg)`,
 		heading: '15 Gift Ideas for Mom and Dad. Wherever They Are This Year',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt....',
-		button: '#',
+		button: `${base}article`,
 	},
 ];
 export const team = [

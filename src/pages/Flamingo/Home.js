@@ -10,7 +10,7 @@ import Services from '~s/Flamingo/Services.js';
 import Services2 from '~c/Flamingo/Services2.js';
 import Customers from '~c/Flamingo/Customers.js';
 
-import { home } from './db';
+import { home, customers, testimonials } from './db';
 
 const FlamingoHome = () => (
 	<div className="flamingo">
@@ -74,9 +74,9 @@ const FlamingoHome = () => (
 				</h2>
 				<h5>{home.testimonials.description}</h5>
 			</div>
-			<Testimonials />
+			<Testimonials testimonials={testimonials} />
 			<div className="container">
-				<Customers />
+				<Customers customers={customers} />
 			</div>
 		</div>
 		<News />

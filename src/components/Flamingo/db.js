@@ -19,7 +19,7 @@ export const nav = {
 			text: 'about',
 		},
 		{
-			link: `#`,
+			link: `${base}blog`,
 			text: 'blog',
 		},
 	],
@@ -70,13 +70,4 @@ export const progress = [
 		name: 'Social Media',
 		percentage: '70%',
 	},
-];
-export const customers = [
-	'fab fa-jedi-order icon-white',
-	'fas fa-star-of-life icon-white',
-	'fas fa-store-alt icon-white',
-	'fas fa-share-alt-square icon-white',
-	'fas fa-poo-storm icon-white',
-	'fas fa-charging-station icon-white',
-	'fas fa-snowplow icon-white',
 ];

@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { PUBLIC_URL } from '~/constants/flamingo';
-import { testimonials } from './db';
-
-const Testimonials = () => {
+const Testimonials = ({ testimonials }) => {
 	useEffect(() => {
 		import('./testimonials.css');
 	});
