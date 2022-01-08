@@ -1,0 +1,141 @@
+:root {
+	--white: #fff;
+	--black: #000;
+	--brown: rgb(42, 28, 14);
+	--overlay: rgba(42, 28, 14, 0.4);
+	--overlay-dark: rgba(42, 28, 14, 0.7);
+	--space-s: 15px;
+	--space-m: 60px;
+	--radius-button: 25px;
+	--radius: 5px;
+	--size-s: 18px;
+	--size-m: 38px;
+	--size-l: 54px;
+	--family: 'Montserrat Alternates', sans-serif;
+}
+.houses {
+	font-family: var(--family);
+	font-size: var(--size-s);
+	color: var(--white);
+	background-color: var(--brown);
+}
+h1 {
+	font-size: var(--size-l);
+	font-weight: 700;
+	line-height: 1.4;
+}
+h2 {
+	font-size: var(--size-m);
+	font-weight: 700;
+	line-height: 1.4;
+}
+h3 {
+	font-size: var(--size-s);
+	font-weight: 700;
+	line-height: 1.4;
+}
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.bg-cover {
+	background-size: cover;
+	background-position: center;
+}
+.columns-2 {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: calc(var(--space-s) * -1);
+	margin-right: calc(var(--space-s) * -1);
+	padding: var(--space-m);
+	width: 100%;
+}
+.columns-2 .column {
+	width: 50%;
+	padding: var(--space-s);
+	position: relative;
+}
+.header {
+	height: 600px;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 3px solid var(--white);
+}
+.header:before {
+	content: '';
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	background-color: var(--overlay);
+}
+.header h1 {
+	position: relative;
+	width: 60%;
+	text-align: center;
+}
+.pt-50 {
+	padding-top: 50%;
+}
+.logo {
+	position: absolute;
+	top: var(--space-s);
+	left: var(--space-m);
+	width: 200px;
+}
+.details {
+	position: absolute;
+	bottom: var(--space-s);
+	text-align: center;
+	width: 100%;
+	padding: var(--space-s) var(--space-m);
+	z-index: 10;
+}
+.details h2 {
+	margin-bottom: var(--space-s);
+}
+.house:after {
+	content: '';
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	background-color: var(--overlay);
+	transition: all 0.2s ease-in-out;
+}
+.house,
+.house .bg-cover {
+	border-radius: var(--radius);
+	overflow: hidden;
+}
+.house:hover:after {
+	background-color: var(--overlay-dark);
+}
+.details span {
+	padding: 0 var(--space-s);
+	text-transform: capitalize;
+}
+.button {
+	border: 1px solid var(--white);
+	border-radius: var(--radius-button);
+	padding: var(--space-s) var(--space-m);
+	margin-bottom: var(--space-m);
+	margin-top: var(--space-s);
+	transition: all 0.2s ease-in-out;
+	font-weight: 700;
+}
+.button:hover {
+	background-color: var(--white);
+	color: var(--brown);
+}
+.house .hover {
+	display: none;
+}
+.house:hover .hover {
+	display: block;
+}
