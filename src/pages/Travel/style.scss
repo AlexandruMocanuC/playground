@@ -1,0 +1,119 @@
+:root {
+	--grey: #aaa;
+	--white: #fff;
+	--size-s: 18px;
+	--size-m: 24px;
+	--size-l: 40px;
+	--space-s: 15px;
+	--space-m: 40px;
+	--space-l: 100px;
+	--radius: 10px;
+	--family: 'Varela Round', sans-serif;
+	--overlay: rgba(0, 0, 0, 0.5);
+}
+.travel {
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+	font-family: var(--family);
+	font-size: var(--size-s);
+	padding: var(--space-l) var(--space-m);
+	color: var(--white);
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	transition: all 0.2s ease-in-out;
+}
+.travel:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: var(--overlay);
+}
+.sidebar {
+	position: relative;
+	width: calc(100% / 3);
+}
+.main {
+	position: relative;
+	width: calc(100% / 3 * 2);
+}
+.columns-2 {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: calc(var(--space-s) * -1);
+	margin-right: calc(var(--space-s) * -1);
+}
+.columns-2 .column {
+	width: 50%;
+	padding: var(--space-s);
+}
+h1 {
+	font-size: var(--size-l);
+}
+h2 {
+	font-size: var(--size-m);
+}
+h3 {
+	font-size: var(--size-s);
+}
+.sidebar h3 {
+	color: var(--grey);
+}
+.main h2 {
+	margin-bottom: var(--space-m);
+}
+.continents {
+	margin-top: var(--space-m);
+}
+.continents:first-child {
+	margin-top: 0;
+}
+.country {
+	padding: var(--space-s);
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	display: flex;
+	align-items: center;
+}
+.country:hover {
+	color: var(--white);
+}
+.city h3 {
+	margin-bottom: var(--space-s);
+}
+.city-image {
+	background-size: cover;
+	background-position: center;
+	border-radius: var(--radius);
+	border: 3px solid var(--white);
+	position: relative;
+}
+.city-image:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: var(--overlay);
+	transition: all 0.2s ease-in-out;
+	border-radius: var(--radius);
+}
+.city-image:hover:after {
+	opacity: 0;
+}
+.fill {
+	padding-top: 100%;
+}
+.country span {
+	background-size: cover;
+	background-position: center;
+	width: calc(var(--space-s) / 2 * 3);
+	height: var(--space-s);
+	margin-right: var(--space-s);
+	display: inline-block;
+}

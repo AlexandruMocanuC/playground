@@ -31,10 +31,23 @@ module.exports = {
       dependOn: 'flamingo',
       import: './src/pages/Flamingo/Works.js',
     },
+    'flamingo/blog': {
+      dependOn: 'flamingo',
+      import: './src/pages/Flamingo/Blog.js',
+    },
+    'flamingo/article': {
+      dependOn: 'flamingo',
+      import: './src/pages/Flamingo/Article.js',
+    },
     'flamingo/contact': {
       dependOn: 'flamingo',
       import: './src/pages/Flamingo/Contact.js',
     },
+    travel: {
+      dependOn: 'app',
+      import: './src/pages/Travel/Home.js',
+    },
+    travel: './src/pages/Travel/style.scss',
   },
   output: {
     filename: '[name].[hash].js',
@@ -138,8 +151,26 @@ module.exports = {
       inject: 'head',
     }),
     new HtmlWebPackPlugin({
+      filename: 'flamingo/blog/index.html',
+      chunks: ['app', 'flamingo', 'flamingo/blog'],
+      template: './src/index.html',
+      inject: 'head',
+    }),
+    new HtmlWebPackPlugin({
+      filename: 'flamingo/article/index.html',
+      chunks: ['app', 'flamingo', 'flamingo/article'],
+      template: './src/index.html',
+      inject: 'head',
+    }),
+    new HtmlWebPackPlugin({
       filename: 'flamingo/contact/index.html',
       chunks: ['app', 'flamingo', 'flamingo/contact'],
+      template: './src/index.html',
+      inject: 'head',
+    }),
+    new HtmlWebPackPlugin({
+      filename: 'travel/index.html',
+      chunks: ['app', 'travel'],
       template: './src/index.html',
       inject: 'head',
     }),

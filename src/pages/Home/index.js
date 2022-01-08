@@ -9,6 +9,7 @@ const Home = () => (
 	<b>
 		home
 		<Link to={`${base}flamingo/`}>Flamingo</Link>
+		<Link to={`${base}travel/`}>Travel</Link>
 	</b>
 );
 

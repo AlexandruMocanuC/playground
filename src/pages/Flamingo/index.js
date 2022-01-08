@@ -14,6 +14,7 @@ import Works from './Works';
 import Contact from './Contact';
 import Blog from './Blog';
 import Article from './Article';
+import Menu from '~c/Flamingo/Menu';
 
 export const routes = [
 	{ index: true, element: <Home /> },
@@ -59,6 +60,7 @@ const Flamingo = () => {
 			<Navigation />
 			<Outlet />
 			<Footer />
+			<Menu />
 		</b>
 	);
 };
