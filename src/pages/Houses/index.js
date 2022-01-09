@@ -6,15 +6,8 @@ import { Outlet } from 'react-router-dom';
 import { base } from '~/constants/houses';
 
 import Home from './Home';
-import House from './House';
 
-export const routes = [
-	{ index: true, element: <Home /> },
-	{
-		path: `house/`,
-		element: <House />,
-	},
-];
+export const routes = [{ index: true, element: <Home /> }];
 
 const Houses = () => {
 	useEffect(() => {
