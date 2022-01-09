@@ -29,7 +29,7 @@ const House = ({ house, onClose, onPrev, onNext }) => {
 					{house.rooms.map((room, index) => (
 						<div className="room" key={index}>
 							<div
-								className="bg-cover"
+								className="image bg-cover"
 								style={{
 									backgroundImage: room.image,
 								}}
