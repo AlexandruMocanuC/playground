@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { home } from './db';
+import House from './House';
 
 const Home = () => {
+	const [houseIndex, setHouseIndex] = useState(null);
+
 	return (
 		<div className="houses">
 			<div
@@ -30,9 +33,12 @@ const Home = () => {
 							<h2>{house.name}</h2>
 							<p>{house.description}</p>
 							<div className="hover">
-								<a className="button" href="#">
+								<span
+									className="button"
+									onClick={() => setHouseIndex(index)}
+								>
 									See house
-								</a>
+								</span>
 								<div>
 									{house.details.map((item, key) => (
 										<span key={key}>
@@ -45,6 +51,26 @@ const Home = () => {
 					</div>
 				))}
 			</div>
+			{houseIndex !== null ? (
+				<House
+					house={home.houses[houseIndex]}
+					onClose={() => setHouseIndex(null)}
+					onPrev={() =>
+						setHouseIndex(
+							houseIndex === 0
+								? home.houses.length - 1
+								: houseIndex - 1
+						)
+					}
+					onNext={() =>
+						setHouseIndex(
+							houseIndex === home.houses.length - 1
+								? 0
+								: houseIndex + 1
+						)
+					}
+				/>
+			) : null}
 		</div>
 	);
 };

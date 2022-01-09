@@ -26,6 +26,20 @@ export const home = {
 					value: '0',
 				},
 			],
+			rooms: [
+				{
+					image: `url(${PUBLIC_URL}/room1.jpg)`,
+					name: 'Inside a modern wooden house constructed in Oulu in Finland',
+				},
+				{
+					image: `url(${PUBLIC_URL}/room2.jpg)`,
+					name: 'Inside a modern log home situated in Oulu in Finland and delivered',
+				},
+				{
+					image: `url(${PUBLIC_URL}/room3.jpg)`,
+					name: 'Cozy atmosphere of a log home',
+				},
+			],
 		},
 		{
 			image: `url(${PUBLIC_URL}/house2.jpg)`,
@@ -44,6 +58,20 @@ export const home = {
 				{
 					name: 'floors',
 					value: '2',
+				},
+			],
+			rooms: [
+				{
+					image: `url(${PUBLIC_URL}/room4.jpg)`,
+					name: 'Inside a Swedish style wooden home',
+				},
+				{
+					image: `url(${PUBLIC_URL}/room5.jpg)`,
+					name: 'Inside a chalet in Vosges Mountains (France)',
+				},
+				{
+					image: `url(${PUBLIC_URL}/room6.jpg)`,
+					name: 'Inside an ecological wooden home in France',
 				},
 			],
 		},
@@ -66,6 +94,20 @@ export const home = {
 					value: '1',
 				},
 			],
+			rooms: [
+				{
+					image: `url(${PUBLIC_URL}/room7.jpg)`,
+					name: 'Inside a Scandinavian style luxury log home',
+				},
+				{
+					image: `url(${PUBLIC_URL}/room8.jpg)`,
+					name: 'A cozy bedroom: quality living in log homes',
+				},
+				{
+					image: `url(${PUBLIC_URL}/room9.jpg)`,
+					name: 'Inside a log house produced in Finland',
+				},
+			],
 		},
 		{
 			image: `url(${PUBLIC_URL}/house4.jpg)`,
@@ -86,84 +128,18 @@ export const home = {
 					value: '1',
 				},
 			],
-		},
-		{
-			image: `url(${PUBLIC_URL}/house5.jpg)`,
-			name: 'House no.5',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			details: [
+			rooms: [
 				{
-					name: 'rooms',
-					value: '2',
+					image: `url(${PUBLIC_URL}/room10.jpg)`,
+					name: 'Inside a log home from Finland',
 				},
 				{
-					name: 'space',
-					value: '50mp',
+					image: `url(${PUBLIC_URL}/room11.jpg)`,
+					name: 'Inside a Finnish log home ',
 				},
 				{
-					name: 'floors',
-					value: '0',
-				},
-			],
-		},
-		{
-			image: `url(${PUBLIC_URL}/house6.jpg)`,
-			name: 'House no.6',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			details: [
-				{
-					name: 'rooms',
-					value: '5',
-				},
-				{
-					name: 'space',
-					value: '110mp',
-				},
-				{
-					name: 'floors',
-					value: '2',
-				},
-			],
-		},
-		{
-			image: `url(${PUBLIC_URL}/house7.jpg)`,
-			name: 'House no.7',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			details: [
-				{
-					name: 'rooms',
-					value: '6',
-				},
-				{
-					name: 'space',
-					value: '140mp',
-				},
-				{
-					name: 'floors',
-					value: '1',
-				},
-			],
-		},
-		{
-			image: `url(${PUBLIC_URL}/house8.jpg)`,
-			name: 'House no.8',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			details: [
-				{
-					name: 'rooms',
-					value: '3',
-				},
-				{
-					name: 'space',
-					value: '80mp',
-				},
-				{
-					name: 'floors',
-					value: '1',
+					image: `url(${PUBLIC_URL}/room12.jpg)`,
+					name: 'Round log home made of kelo located in Swedish Lapland',
 				},
 			],
 		},

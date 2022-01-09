@@ -1,4 +1,5 @@
 :root {
+	--gold: rgb(218, 165, 32);
 	--white: #fff;
 	--black: #000;
 	--brown: rgb(42, 28, 14);
@@ -120,16 +121,17 @@ p {
 	padding: 0 var(--space-s);
 	text-transform: capitalize;
 }
-.button {
+.details .button {
 	border: 1px solid var(--white);
 	border-radius: var(--radius-button);
 	padding: var(--space-s) var(--space-m);
 	margin-bottom: var(--space-m);
-	margin-top: var(--space-s);
+	margin-top: var(--space-m);
 	transition: all 0.2s ease-in-out;
 	font-weight: 700;
+	display: inline-block;
 }
-.button:hover {
+.details .button:hover {
 	background-color: var(--white);
 	color: var(--brown);
 }
@@ -138,4 +140,99 @@ p {
 }
 .house:hover .hover {
 	display: block;
+}
+.content {
+	padding: var(--space-s);
+	display: flex;
+	flex-wrap: wrap;
+	height: 100vh;
+}
+.content .sidebar {
+	width: 500px;
+	background-color: var(--white);
+	color: var(--black);
+	height: calc(100vh - 2 * var(--space-s));
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: var(--space-s) 0;
+}
+.content .main {
+	width: calc(100% - 500px);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column;
+	padding: var(--space-m) calc(var(--space-m) * 2);
+	position: relative;
+	height: calc(100vh - 2 * var(--space-s));
+}
+.content .main:after {
+	content: '';
+	background-color: var(--overlay);
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+}
+.text {
+	position: relative;
+	z-index: 2;
+}
+.arrow-prev {
+	position: absolute;
+	left: var(--space-s);
+	padding: var(--space-s);
+	font-size: var(--size-m);
+	z-index: 2;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+.arrow-next {
+	position: absolute;
+	right: var(--space-s);
+	padding: var(--space-s);
+	font-size: var(--size-m);
+	z-index: 2;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+.arrow-next:hover,
+.arrow-prev:hover {
+	background-color: var(--overlay);
+	border-radius: var(--radius-button);
+	color: var(--gold);
+}
+.close {
+	position: absolute;
+	z-index: 2;
+	right: var(--space-s);
+	top: var(--space-s);
+	font-size: var(--size-m);
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+}
+.close:hover {
+	color: var(--gold);
+}
+.room {
+	margin: var(--space-s);
+}
+.room h3 {
+	margin-top: var(--space-s);
+}
+.sidebar h2 {
+	padding-left: var(--space-s);
+}
+.content h1 {
+	margin-bottom: var(--space-s);
+}
+.house-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 11;
+	background-color: var(--brown);
 }
