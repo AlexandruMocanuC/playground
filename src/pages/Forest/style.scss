@@ -88,3 +88,12 @@
 		text-transform: uppercase;
 	}
 }
+.preview {
+	height: 350px;
+}
+.caption {
+	background-color: var(--grey);
+	text-align: center;
+	color: var(--white);
+	padding: var(--space-s);
+}
