@@ -22,7 +22,7 @@
 	font-size: var(--size-s);
 }
 .container {
-	width: var(--container);
+	max-width: var(--container);
 	padding: 0 var(--space-s);
 	margin-left: auto;
 	margin-right: auto;
@@ -78,5 +78,13 @@
 		&:hover {
 			border-bottom: 2px solid var(--white);
 		}
+	}
+}
+.info-component {
+	padding: var(--space-m);
+	text-align: center;
+	h2 {
+		margin-bottom: var(--space-m);
+		text-transform: uppercase;
 	}
 }
