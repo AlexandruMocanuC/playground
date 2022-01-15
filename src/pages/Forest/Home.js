@@ -1,6 +1,7 @@
 import React from 'react';
 import { PUBLIC_URL, base } from '~/constants/forest';
 import Info from '~c/Forest/Info';
+import Columns3 from '~c/Forest/Columns3';
 
 import { Link } from 'react-router-dom';
 
@@ -42,6 +43,7 @@ const ForestHome = () => (
 			heading="a unique 1 week adventure"
 			description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat ex turpis, a commodo arcu consequat ac. Fusce id ante eu elit pulvinar suscipit. Nullam pulvinar ligula porta felis scelerisque accumsan. Aenean in libero rutrum, cursus est a, tincidunt risus. Duis viverra elit et dolor lobortis, et egestas erat vestibulum."
 		/>
+		<Columns3 />
 		<Info
 			heading="our satisfied adventurers"
 			description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat ex turpis, a commodo arcu consequat ac. Fusce id ante eu elit pulvinar suscipit. Nullam pulvinar ligula porta felis scelerisque accumsan. Aenean in libero rutrum, cursus est a, tincidunt risus."
