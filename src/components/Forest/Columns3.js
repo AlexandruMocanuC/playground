@@ -12,7 +12,7 @@ const Columns3 = ({ columns }) => {
 						}}
 					></div>
 					<div className="caption">
-						<p>{column.description}</p>
+						<p>{column.caption}</p>
 					</div>
 				</div>
 			))}
