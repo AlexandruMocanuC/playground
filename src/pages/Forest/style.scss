@@ -89,11 +89,18 @@
 	}
 }
 .preview {
-	height: 350px;
+	height: 550px;
 }
 .caption {
 	background-color: var(--grey);
 	text-align: center;
 	color: var(--white);
 	padding: var(--space-s);
+}
+.columns-3 {
+	display: flex;
+	flex-wrap: wrap;
+	.column {
+		width: calc(100% / 3);
+	}
 }

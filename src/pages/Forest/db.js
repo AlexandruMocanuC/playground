@@ -47,7 +47,7 @@ export const home = {
 		},
 		{
 			type: 'info',
-			heading: 'aour satisfied adventurers',
+			heading: 'our satisfied adventurers',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat ex turpis, a commodo arcu consequat ac. Fusce id ante eu elit pulvinar suscipit. Nullam pulvinar ligula porta felis scelerisque accumsan. Aenean in libero rutrum, cursus est a, tincidunt risus. Duis viverra elit et dolor lobortis, et egestas erat vestibulum.',
 		},
