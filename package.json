@@ -47,6 +47,6 @@
     "build-dll": "webpack --config webpack.config.dll.js",
     "prepare": "yarn clearcache && yarn prebuild && yarn build-dll && yarn build",
     "export": "gh-pages -d build",
-    "deploy": "yarn prepare && yarn export"
+    "deploy": "yarn prepare && yarn export && yarn prebuild"
   }
 }

@@ -11,6 +11,7 @@ const Home = () => (
 		<Link to={`${base}flamingo/`}>Flamingo</Link>
 		<Link to={`${base}travel/`}>Travel</Link>
 		<Link to={`${base}houses/`}>Houses</Link>
+		<Link to={`${base}forest/`}>Forest</Link>
 	</b>
 );
 
