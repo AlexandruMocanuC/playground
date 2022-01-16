@@ -2,6 +2,7 @@ import React from 'react';
 import Info from '~c/Forest/Info';
 import Columns3 from '~c/Forest/Columns3';
 import Columns2 from '~c/Forest/Columns2';
+import Testimonials from '~c/Forest/Testimonials';
 import { home } from './db';
 
 const ForestHome = () => (
@@ -38,6 +39,13 @@ const ForestHome = () => (
 					);
 				case 'columns-3':
 					return <Columns3 columns={section.columns} />;
+				case 'testimonials':
+					return (
+						<Testimonials
+							image={section.image}
+							items={section.items}
+						/>
+					);
 				case 'columns-2':
 					return (
 						<Columns2

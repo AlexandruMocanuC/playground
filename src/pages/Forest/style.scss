@@ -65,6 +65,16 @@
 	line-height: 1.6;
 	font-weight: 700;
 }
+.forest h2 {
+	font-size: var(--size-m);
+	line-height: 1.6;
+	font-weight: 700;
+}
+.forest h3 {
+	font-size: var(--size-s);
+	line-height: 1.6;
+	font-weight: 700;
+}
 .social-media {
 	color: var(--white);
 	text-align: center;
@@ -120,5 +130,11 @@
 	}
 	p {
 		margin-bottom: var(--space-m);
+	}
+}
+.testimonials {
+	.bg-white {
+		background-color: var(--white);
+		padding: var(--space-m);
 	}
 }
