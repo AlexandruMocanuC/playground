@@ -104,3 +104,21 @@
 		width: calc(100% / 3);
 	}
 }
+.columns-2 {
+	display: flex;
+	flex-wrap: wrap;
+	padding: var(--space-m) 0;
+	margin-left: calc(var(--space-m) * -1);
+	margin-right: calc(var(--space-m) * -1);
+	.column {
+		width: calc(100% / 2);
+		padding: 0 var(--space-m);
+	}
+	h2 {
+		text-transform: uppercase;
+		margin-bottom: var(--space-m);
+	}
+	p {
+		margin-bottom: var(--space-m);
+	}
+}
