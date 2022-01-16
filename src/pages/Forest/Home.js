@@ -34,15 +34,17 @@ const ForestHome = () => (
 				case 'info':
 					return (
 						<Info
+							key={key}
 							heading={section.heading}
 							description={section.description}
 						/>
 					);
 				case 'columns-3':
-					return <Columns3 columns={section.columns} />;
+					return <Columns3 key={key} columns={section.columns} />;
 				case 'testimonials':
 					return (
 						<Testimonials
+							key={key}
 							image={section.image}
 							items={section.items}
 						/>
@@ -50,6 +52,7 @@ const ForestHome = () => (
 				case 'columns-2':
 					return (
 						<Columns2
+							key={key}
 							heading={section.heading}
 							paragraphs={section.paragraphs}
 							image={section.image}
