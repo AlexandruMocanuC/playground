@@ -9,7 +9,7 @@ const Testimonials = ({ image, items }) => {
 			<div className="container">
 				<div className="columns-2">
 					{items.map((item, index) => (
-						<div className="column">
+						<div className="column" key={index}>
 							<div className="bg-white">
 								<p>{item.description}</p>
 								<h3>{item.name}</h3>
