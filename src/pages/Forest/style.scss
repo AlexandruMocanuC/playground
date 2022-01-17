@@ -144,3 +144,31 @@
 	text-align: center;
 	padding: var(--space-m);
 }
+
+@media (max-width: 1400px) {
+	:root {
+		--container: 1200px;
+	}
+}
+@media (max-width: 1200px) {
+	:root {
+		--container: 800px;
+	}
+	.preview {
+		height: 350px;
+	}
+}
+@media (max-width: 800px) {
+	:root {
+		--container: 800px;
+		--size-l: 60px;
+	}
+	.columns-3 .column,
+	.columns-2 .column {
+		width: 100%;
+		margin-bottom: var(--space-m);
+	}
+	.columns-2 .column.bg-cover {
+		height: 350px;
+	}
+}
