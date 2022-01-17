@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '~c/Forest/Header';
 import Info from '~c/Forest/Info';
 import Columns3 from '~c/Forest/Columns3';
 import Columns2 from '~c/Forest/Columns2';
@@ -8,56 +9,17 @@ import { home } from './db';
 
 const ForestHome = () => (
 	<div className="forest">
-		<div
-			className="bg-cover header"
-			style={{
-				backgroundImage: home.header.image,
-			}}
-		>
-			<div className="container">
-				<div className="logo">
-					<img src={home.header.logo} />
-				</div>
-				<h1>{home.header.heading}</h1>
-				<p>{home.header.description}</p>
-				<div className="social-media">
-					{home.header.socialMedia.map((item, index) => (
-						<a href={item.link} key={index}>
-							<i className={item.icon}></i>
-						</a>
-					))}
-				</div>
-			</div>
-		</div>
+		<Header {...home.header} />
 		{home.content.map((section, key) => {
 			switch (section.type) {
 				case 'info':
-					return (
-						<Info
-							key={key}
-							heading={section.heading}
-							description={section.description}
-						/>
-					);
+					return <Info key={key} {...section} />;
 				case 'columns-3':
 					return <Columns3 key={key} columns={section.columns} />;
 				case 'testimonials':
-					return (
-						<Testimonials
-							key={key}
-							image={section.image}
-							items={section.items}
-						/>
-					);
+					return <Testimonials key={key} {...section} />;
 				case 'columns-2':
-					return (
-						<Columns2
-							key={key}
-							heading={section.heading}
-							paragraphs={section.paragraphs}
-							image={section.image}
-						/>
-					);
+					return <Columns2 key={key} {...section} />;
 				default:
 					return null;
 			}
