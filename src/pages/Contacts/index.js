@@ -13,7 +13,7 @@ const Contacts = () => {
 	useEffect(() => {
 		WebFont.load({
 			google: {
-				families: ['Varela+Round'],
+				families: ['Montserrat+Alternates:400,700'],
 			},
 		});
 
