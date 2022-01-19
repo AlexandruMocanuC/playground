@@ -1,0 +1,43 @@
+:local {
+	.card {
+		background-size: auto 100%;
+		background-position: right;
+		background-color: var(--red);
+		height: 400px;
+		width: 600px;
+		background-repeat: no-repeat;
+		border-radius: var(--radius);
+		padding: calc(var(--space-m) * 2) var(--space-m);
+		color: var(--white);
+		position: relative;
+		overflow: hidden;
+
+		margin-bottom: var(--space-m);
+
+		h2 {
+			margin-bottom: var(--space-m);
+		}
+
+		.image {
+			width: 50%;
+
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+
+			background-size: cover;
+			background-position: center;
+		}
+
+		.info {
+			width: 50%;
+		}
+
+		.button {
+			position: absolute;
+			bottom: calc(var(--space-m) * 2);
+			left: var(--space-m);
+		}
+	}
+}

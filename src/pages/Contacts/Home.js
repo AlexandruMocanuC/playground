@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
+import Card from '~c/Contacts/Card';
+
+import Button from '~c/Contacts/Button';
+
+import { contacts } from './db';
 
 import $ from './style.scss';
 
 const ContactsHome = () => {
 	return (
 		<div className={$.contacts}>
-			<div className={$.button}>Submit</div>
-			<div className={$.button_red}>Submit</div>
-			<div className={$.button_grey}>Submit</div>
+			{contacts.map((contact, index) => (
+				<Card {...contact} key={index} />
+			))}
+			<Button>submit</Button>
+			<Button type="grey">submit</Button>
+			<Button type="red">submit</Button>
 		</div>
 	);
 };
