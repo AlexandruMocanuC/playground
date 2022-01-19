@@ -1,5 +1,97 @@
 :root {
 	--white: #fff;
 	--black: #000;
-	--blue: ;
+	--facebook: #4267b2;
+	--instagram: #8a3ab9;
+	--light-red: #f88379;
+	--red: #880808;
+	--light-blue: #89cff0;
+	--blue: #00008b;
+	--light-grey: #c3c3c3;
+	--grey: #36454f;
+
+	--space-s: 15px;
+	--space-m: 40px;
+	--space-button: 10px 25px;
+
+	--radius: 25px;
+
+	--transition: all 0.2s ease-in-out;
+
+	--family: 'Montserrat Alternates', sans-serif;
+
+	--size-s: 18px;
+	--size-m: 24px;
+	--size-l: 36px;
+}
+:local {
+	.contacts {
+		font-family: var(--family);
+		font-size: var(--size-s);
+
+		h1 {
+			font-size: var(--size-l);
+			font-weight: 700;
+			line-height: 1.6;
+		}
+		h2 {
+			font-size: var(--size-m);
+			font-weight: 700;
+			line-height: 1.6;
+		}
+		h3 {
+			font-size: var(--size-s);
+			font-weight: 700;
+			line-height: 1.6;
+		}
+	}
+
+	.button {
+		background-color: var(--light-blue);
+		color: var(--blue);
+		padding: var(--space-button);
+		border-radius: var(--radius);
+		display: inline-block;
+		transition: var(--transition);
+		cursor: pointer;
+		font-weight: 700;
+		line-height: 1.6;
+
+		&:hover {
+			background-color: var(--blue);
+			color: var(--white);
+		}
+	}
+	.button_red {
+		background-color: var(--light-red);
+		color: var(--red);
+		padding: var(--space-button);
+		border-radius: var(--radius);
+		display: inline-block;
+		transition: var(--transition);
+		cursor: pointer;
+		font-weight: 700;
+		line-height: 1.6;
+
+		&:hover {
+			background-color: var(--red);
+			color: var(--white);
+		}
+	}
+	.button_grey {
+		background-color: var(--light-grey);
+		color: var(--grey);
+		padding: var(--space-button);
+		border-radius: var(--radius);
+		display: inline-block;
+		transition: var(--transition);
+		cursor: pointer;
+		font-weight: 700;
+		line-height: 1.6;
+
+		&:hover {
+			background-color: var(--grey);
+			color: var(--white);
+		}
+	}
 }
