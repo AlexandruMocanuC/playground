@@ -12,6 +12,7 @@ const Home = () => (
 		<Link to={`${base}travel/`}>Travel</Link>
 		<Link to={`${base}houses/`}>Houses</Link>
 		<Link to={`${base}forest/`}>Forest</Link>
+		<Link to={`${base}contacts/`}>Contacts</Link>
 	</b>
 );
 

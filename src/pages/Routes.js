@@ -6,6 +6,7 @@ import Flamingo, { routes as flamingoRoutes } from '~/pages/Flamingo';
 import Travel, { routes as travelRoutes } from '~/pages/Travel';
 import Houses, { routes as housesRoutes } from '~/pages/Houses';
 import Forest, { routes as forestRoutes } from '~/pages/Forest';
+import Contacts, { routes as contactsRoutes } from '~/pages/Contacts';
 
 import { base } from '~/constants';
 
@@ -33,6 +34,11 @@ const routes = [
 		path: `${base}forest/`,
 		element: <Forest />,
 		children: forestRoutes,
+	},
+	{
+		path: `${base}contacts/`,
+		element: <Contacts />,
+		children: contactsRoutes,
 	},
 ];
 
