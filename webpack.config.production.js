@@ -53,6 +53,11 @@ module.exports = {
       import: './src/pages/Houses/Home.js',
     },
     houses: './src/pages/Houses/style.scss',
+    contacts: {
+      dependOn: 'app',
+      import: './src/pages/Contacts/Home.js',
+    },
+    contacts: './src/pages/Contacts/style.scss',
   },
   output: {
     filename: '[name].[hash].js',
@@ -182,6 +187,12 @@ module.exports = {
     new HtmlWebPackPlugin({
       filename: 'houses/index.html',
       chunks: ['app', 'houses'],
+      template: './src/index.html',
+      inject: 'head',
+    }),
+    new HtmlWebPackPlugin({
+      filename: 'contacts/index.html',
+      chunks: ['app', 'contacts'],
       template: './src/index.html',
       inject: 'head',
     }),
