@@ -1,0 +1,40 @@
+:local {
+	.card {
+		width: 600px;
+		border-radius: var(--radius);
+		color: var(--white);
+		display: flex;
+		flex-wrap: wrap;
+		overflow: hidden;
+		margin-bottom: var(--space-m);
+
+		&.blue {
+			background-color: var(--card-blue);
+		}
+		&.red {
+			background-color: var(--card-red);
+		}
+		&.yellow {
+			background-color: var(--card-yellow);
+		}
+		&.green {
+			background-color: var(--card-green);
+		}
+
+		h2 {
+			margin-bottom: var(--space-m);
+		}
+		.image {
+			width: 50%;
+			background-position: center;
+			background-size: cover;
+		}
+		.details {
+			width: 50%;
+			padding: var(--space-m);
+		}
+		.button {
+			margin-top: var(--space-m);
+		}
+	}
+}

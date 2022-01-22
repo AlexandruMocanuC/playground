@@ -10,6 +10,11 @@
 	--light-grey: #c3c3c3;
 	--grey: #36454f;
 
+	--card-blue: #0096ff;
+	--card-yellow: #ffbf00;
+	--card-red: #ff3131;
+	--card-green: #0bda51;
+
 	--space-s: 15px;
 	--space-m: 40px;
 	--space-button: 10px 25px;
@@ -43,55 +48,6 @@
 			font-size: var(--size-s);
 			font-weight: 700;
 			line-height: 1.6;
-		}
-	}
-
-	.button {
-		background-color: var(--light-blue);
-		color: var(--blue);
-		padding: var(--space-button);
-		border-radius: var(--radius);
-		display: inline-block;
-		transition: var(--transition);
-		cursor: pointer;
-		font-weight: 700;
-		line-height: 1.6;
-
-		&:hover {
-			background-color: var(--blue);
-			color: var(--white);
-		}
-	}
-	.button_red {
-		background-color: var(--light-red);
-		color: var(--red);
-		padding: var(--space-button);
-		border-radius: var(--radius);
-		display: inline-block;
-		transition: var(--transition);
-		cursor: pointer;
-		font-weight: 700;
-		line-height: 1.6;
-
-		&:hover {
-			background-color: var(--red);
-			color: var(--white);
-		}
-	}
-	.button_grey {
-		background-color: var(--light-grey);
-		color: var(--grey);
-		padding: var(--space-button);
-		border-radius: var(--radius);
-		display: inline-block;
-		transition: var(--transition);
-		cursor: pointer;
-		font-weight: 700;
-		line-height: 1.6;
-
-		&:hover {
-			background-color: var(--grey);
-			color: var(--white);
 		}
 	}
 }
