@@ -10,9 +10,15 @@ const ContactsHome = () => {
 	const colors = ['blue', 'yellow', 'red', 'green'];
 	return (
 		<div className={$.contacts}>
-			{contacts.map((contact, index) => (
-				<Card {...contact} color={colors[index % 4]} key={index} />
-			))}
+			<div className={$.mobile}>
+				<h1>Contacts</h1>
+				<h1 className={$.search_icon}>
+					<i className="fas fa-search"></i>
+				</h1>
+				{contacts.map((contact, index) => (
+					<Card {...contact} color={colors[index % 4]} key={index} />
+				))}
+			</div>
 		</div>
 	);
 };
