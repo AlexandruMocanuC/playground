@@ -1,43 +1,40 @@
 :local {
 	.card {
-		background-size: auto 100%;
-		background-position: right;
-		background-color: var(--red);
-		height: 400px;
 		width: 600px;
-		background-repeat: no-repeat;
 		border-radius: var(--radius);
-		padding: calc(var(--space-m) * 2) var(--space-m);
 		color: var(--white);
-		position: relative;
+		display: flex;
+		flex-wrap: wrap;
 		overflow: hidden;
-
 		margin-bottom: var(--space-m);
+
+		&.blue {
+			background-color: var(--card-blue);
+		}
+		&.red {
+			background-color: var(--card-red);
+		}
+		&.yellow {
+			background-color: var(--card-yellow);
+		}
+		&.green {
+			background-color: var(--card-green);
+		}
 
 		h2 {
 			margin-bottom: var(--space-m);
 		}
-
 		.image {
 			width: 50%;
-
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			right: 0;
-
-			background-size: cover;
 			background-position: center;
+			background-size: cover;
 		}
-
-		.info {
+		.details {
 			width: 50%;
+			padding: var(--space-m);
 		}
-
 		.button {
-			position: absolute;
-			bottom: calc(var(--space-m) * 2);
-			left: var(--space-m);
+			margin-top: var(--space-m);
 		}
 	}
 }
