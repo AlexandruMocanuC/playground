@@ -33,21 +33,68 @@
 	.contacts {
 		font-family: var(--family);
 		font-size: var(--size-s);
+		background-color: var(--light-red);
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-		h1 {
-			font-size: var(--size-l);
-			font-weight: 700;
-			line-height: 1.6;
+	.contacts h1 {
+		font-size: var(--size-l);
+		font-weight: 700;
+		line-height: 1.6;
+	}
+	.contacts h2 {
+		font-size: var(--size-m);
+		font-weight: 700;
+		line-height: 1.6;
+	}
+	.contacts h3 {
+		font-size: var(--size-s);
+		font-weight: 700;
+		line-height: 1.6;
+	}
+
+	.contacts .mobile {
+		width: 600px;
+		height: 90vh;
+		background-color: var(--white);
+		overflow-y: auto;
+		overflow-x: hidden;
+		border-radius: var(--radius);
+		padding: var(--space-m);
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+		position: relative;
+	}
+
+	.contacts .mobile::-webkit-scrollbar {
+		display: none;
+	}
+
+	.contacts .mobile h1 {
+		margin-bottom: var(--space-m);
+	}
+
+	.contacts .mobile .search_icon {
+		position: absolute;
+		top: var(--space-m);
+		right: var(--space-m);
+		cursor: pointer;
+	}
+
+	@media (max-width: 640px) {
+		.contacts .mobile {
+			width: 100%;
+			height: 100%;
+			border-radius: 0;
 		}
-		h2 {
-			font-size: var(--size-m);
-			font-weight: 700;
-			line-height: 1.6;
-		}
-		h3 {
-			font-size: var(--size-s);
-			font-weight: 700;
-			line-height: 1.6;
+	}
+	@media (max-width: 414px) {
+		:root {
+			--space-m: 15px;
+			--space-button: 5px 15px;
 		}
 	}
 }
