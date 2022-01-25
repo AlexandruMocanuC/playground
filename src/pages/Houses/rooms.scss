@@ -1,0 +1,74 @@
+:local {
+	.rooms_modal {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 11;
+		background-color: var(--brown);
+	}
+	.content {
+		padding: var(--space-s);
+		display: flex;
+		flex-wrap: wrap;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		flex-direction: column;
+		padding: var(--space-m) calc(var(--space-m) * 2);
+		position: relative;
+		height: calc(100vh - 2 * var(--space-s));
+	}
+	.arrow_prev {
+		position: absolute;
+		left: var(--space-s);
+		padding: var(--space-s);
+		font-size: var(--size-m);
+		z-index: 2;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+	}
+	.arrow_next {
+		position: absolute;
+		right: var(--space-s);
+		padding: var(--space-s);
+		font-size: var(--size-m);
+		z-index: 2;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+	}
+	.arrow_next:hover,
+	.arrow_prev:hover {
+		background-color: var(--overlay);
+		border-radius: var(--radius-button);
+		color: var(--gold);
+	}
+	.close {
+		position: absolute;
+		z-index: 2;
+		right: var(--space-s);
+		top: var(--space-s);
+		font-size: var(--size-m);
+		transition: all 0.2s ease-in-out;
+		cursor: pointer;
+	}
+	.close:hover {
+		color: var(--gold);
+	}
+	.content h2 {
+		position: absolute;
+		bottom: var(--space-m);
+		text-align: center;
+		left: 0;
+		right: 0;
+	}
+	.image {
+		background-position: center;
+		background-size: cover;
+		width: 50%;
+		height: 50%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
