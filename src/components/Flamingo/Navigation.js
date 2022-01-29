@@ -24,7 +24,6 @@ const Navigation = () => {
 						path: resolved.pathname,
 						end: true,
 					});
-					console.log(resolved, match);
 
 					return (
 						<div
