@@ -12,7 +12,8 @@
 	z-index: 11;
 }
 
-.menu-item a {
+.menu-item a,
+.menu-item-active a {
 	color: var(--white);
 	text-transform: uppercase;
 	padding: var(--space-default);
@@ -22,7 +23,8 @@
 	font-weight: 700;
 	font-family: var(--family-accent);
 }
-.menu-item a:hover {
+.menu-item a:hover,
+.menu-item-active a {
 	border-bottom: 4px solid var(--green);
 }
 

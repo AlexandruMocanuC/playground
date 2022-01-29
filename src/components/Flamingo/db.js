@@ -7,19 +7,19 @@ export const nav = {
 			text: 'home',
 		},
 		{
-			link: `${base}services`,
+			link: `${base}services/`,
 			text: 'services',
 		},
 		{
-			link: `${base}works`,
+			link: `${base}works/`,
 			text: 'Works',
 		},
 		{
-			link: `${base}about`,
+			link: `${base}about/`,
 			text: 'about',
 		},
 		{
-			link: `${base}blog`,
+			link: `${base}blog/`,
 			text: 'blog',
 		},
 	],
@@ -27,7 +27,7 @@ export const nav = {
 		link: `${base}contact`,
 		text: 'contact',
 	},
-	search: true,
+	search: false,
 };
 export const services = [
 	{
