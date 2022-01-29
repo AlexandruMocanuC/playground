@@ -48,13 +48,15 @@ p {
 	background-size: cover;
 	background-position: center;
 }
+.container {
+	padding: var(--space-m);
+	width: 100%;
+}
 .columns-2 {
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: calc(var(--space-s) * -1);
 	margin-right: calc(var(--space-s) * -1);
-	padding: var(--space-m);
-	width: 100%;
 }
 .columns-2 .column {
 	width: 50%;
@@ -100,6 +102,7 @@ p {
 	width: 100%;
 	padding: var(--space-s) var(--space-m);
 	z-index: 10;
+	left: 0;
 }
 .details h2 {
 	margin-bottom: var(--space-s);
@@ -244,4 +247,112 @@ p {
 	bottom: 0;
 	z-index: 11;
 	background-color: var(--brown);
+}
+
+@media (max-width: 1400px) {
+	:root {
+		--space-m: 30px;
+	}
+}
+@media (max-width: 1200px) {
+	:root {
+		--size-m: 24px;
+		--size-l: 38px;
+	}
+	.details .button {
+		padding: calc(var(--space-s) / 2) var(--space-s);
+	}
+	.arrow-next {
+		right: 0;
+	}
+	.arrow-prev {
+		left: 0;
+	}
+}
+@media (max-width: 1024px) {
+	.house .hover {
+		display: block;
+	}
+	.details {
+		position: static;
+	}
+	.house:after {
+		display: none;
+	}
+	.content .sidebar {
+		width: 300px;
+	}
+	.content .main {
+		width: calc(100% - 300px);
+	}
+	.header {
+		height: 400px;
+	}
+	.logo {
+		width: 100px;
+	}
+}
+@media (max-width: 800px) {
+	:root {
+		--size-l: 24px;
+	}
+	.details span {
+		display: block;
+		margin-bottom: calc(var(--space-s) / 2);
+		padding: 0;
+	}
+	.details {
+		text-align: left;
+	}
+	.content .sidebar {
+		width: 100%;
+		height: auto;
+	}
+	.content .main {
+		width: 100%;
+		height: auto;
+		flex-grow: 1;
+	}
+	.rooms .room {
+		width: calc(100% / 3);
+		margin: 0;
+		padding: var(--space-s);
+	}
+	.rooms {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.content {
+		flex-direction: column;
+	}
+}
+@media (max-width: 640px) {
+	.header {
+		height: 250px;
+	}
+	.columns-2 .column {
+		width: 100%;
+	}
+}
+@media (max-width: 480px) {
+	.header {
+		height: auto;
+	}
+	.header h1 {
+		padding: 60px 0;
+	}
+	.logo {
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		z-index: 11;
+	}
+	.content .sidebar {
+		display: none;
+	}
+}
+@media (max-width: 640px) and (max-height: 505px) {
+	.content .sidebar {
+		display: none;
+	}
 }

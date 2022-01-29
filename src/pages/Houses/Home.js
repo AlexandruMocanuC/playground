@@ -67,41 +67,43 @@ const Home = () => {
 				<h1>{home.header.heading}</h1>
 			</div>
 			{filteredHouses.length !== 0 ? (
-				<div className="columns-2">
-					{filteredHouses.map((house, index) => (
-						<div className="column house" key={index}>
-							<div
-								className="bg-cover"
-								style={{
-									backgroundImage: house.image,
-								}}
-							>
-								<div className="pt-50"></div>
-							</div>
-							<div className="details">
-								<h2>{house.name}</h2>
-								<p>{house.description}</p>
-								<div className="hover">
-									<span
-										className="button"
-										onClick={() => setHouseIndex(index)}
-									>
-										See house
-									</span>
-									<div>
-										{house.details.map((item, key) => (
-											<span key={key}>
-												{item.name}: {item.value}
-												{item.name === 'space'
-													? 'mp'
-													: null}
-											</span>
-										))}
+				<div className="container">
+					<div className="columns-2">
+						{filteredHouses.map((house, index) => (
+							<div className="column house" key={index}>
+								<div
+									className="bg-cover"
+									style={{
+										backgroundImage: house.image,
+									}}
+								>
+									<div className="pt-50"></div>
+								</div>
+								<div className="details">
+									<h2>{house.name}</h2>
+									<p>{house.description}</p>
+									<div className="hover">
+										<span
+											className="button"
+											onClick={() => setHouseIndex(index)}
+										>
+											See house
+										</span>
+										<div>
+											{house.details.map((item, key) => (
+												<span key={key}>
+													{item.name}: {item.value}
+													{item.name === 'space'
+														? 'mp'
+														: null}
+												</span>
+											))}
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					))}
+						))}
+					</div>
 				</div>
 			) : (
 				<div className={$.no_results}>

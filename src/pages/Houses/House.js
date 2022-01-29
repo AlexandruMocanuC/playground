@@ -32,23 +32,25 @@ const House = ({ house, onClose, onPrev, onNext }) => {
 					</div>
 					<div className="sidebar">
 						<h2>Rooms</h2>
-						{house.rooms.map((room, index) => (
-							<div
-								className="room"
-								key={index}
-								onClick={() => setRoomIndex(index)}
-							>
+						<div className="rooms">
+							{house.rooms.map((room, index) => (
 								<div
-									className="image bg-cover"
-									style={{
-										backgroundImage: room.image,
-									}}
+									className="room"
+									key={index}
+									onClick={() => setRoomIndex(index)}
 								>
-									<div className="pt-50"></div>
+									<div
+										className="image bg-cover"
+										style={{
+											backgroundImage: room.image,
+										}}
+									>
+										<div className="pt-50"></div>
+									</div>
+									<h3>{room.name}</h3>
 								</div>
-								<h3>{room.name}</h3>
-							</div>
-						))}
+							))}
+						</div>
 					</div>
 				</div>
 			</div>
