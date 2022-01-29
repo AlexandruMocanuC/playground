@@ -62,6 +62,7 @@
 		text-align: center;
 		left: 0;
 		right: 0;
+		padding: 0 var(--space-m);
 	}
 	.image {
 		background-position: center;
@@ -70,5 +71,25 @@
 		height: 50%;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	@media (max-width: 1024px) {
+		.image {
+			width: 600px;
+			height: 300px;
+		}
+	}
+	@media (max-width: 800px) {
+		.image {
+			width: 100%;
+			height: auto;
+			position: relative;
+		}
+		.image:after {
+			content: '';
+			width: 100%;
+			padding-top: 60%;
+			display: block;
+		}
 	}
 }

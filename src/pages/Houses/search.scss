@@ -37,4 +37,14 @@
 	.no_results p {
 		margin-top: var(--space-m);
 	}
+	@media (max-width: 800px) {
+		.search input {
+			padding: calc(var(--space-s) / 2);
+		}
+	}
+	@media (max-width: 480px) {
+		.search {
+			display: none;
+		}
+	}
 }
