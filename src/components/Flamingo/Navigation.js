@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useResolvedPath, useMatch } from 'react-router-dom';
 
 import { base } from '~/constants/flamingo';
 import { nav } from './db';
@@ -18,11 +18,26 @@ const Navigation = () => {
 			</div>
 
 			<div className="menu flex">
-				{nav.menu.map((item, index) => (
-					<div className="menu-item" key={index}>
-						<Link to={item.link}>{item.text}</Link>
-					</div>
-				))}
+				{nav.menu.map((item, index) => {
+					let resolved = useResolvedPath(item.link);
+					let match = useMatch({
+						path: resolved.pathname,
+						end: true,
+					});
+
+					return (
+						<div
+							className={
+								match !== null
+									? 'menu-item-active'
+									: 'menu-item'
+							}
+							key={index}
+						>
+							<Link to={item.link}>{item.text}</Link>
+						</div>
+					);
+				})}
 				<div>
 					<Link to={nav.contact.link} className="button">
 						{nav.contact.text}

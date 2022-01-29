@@ -348,6 +348,15 @@ span.separator {
 .article .detail p {
 	margin-bottom: 0;
 }
+.categories {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.categories .button {
+	margin: 0 var(--space-default) var(--space-default);
+	cursor: pointer;
+}
 
 @media (max-width: 1200px) {
 	:root {

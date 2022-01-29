@@ -95,42 +95,52 @@ export const works = {
 			{
 				image: `url(${PUBLIC_URL}/images/works/item1.jpg)`,
 				heading: 'Arhitecture',
+				category: 'Art',
 			},
 			{
 				image: `url(${PUBLIC_URL}/images/works/item2.jpg)`,
 				heading: 'Photography',
+				category: 'Art',
 			},
 			{
 				image: `url(${PUBLIC_URL}/images/works/item3.jpg)`,
 				heading: 'Teaser',
+				category: 'Video',
 			},
 			{
 				image: `url(${PUBLIC_URL}/images/works/item4.jpg)`,
 				heading: 'Styles',
+				category: 'Art',
 			},
 			{
 				image: `url(${PUBLIC_URL}/images/works/item5.jpg)`,
 				heading: 'About',
+				category: 'Writings',
 			},
 			{
 				image: `url(${PUBLIC_URL}/images/works/item6.jpg)`,
 				heading: 'Names',
+				category: 'Writings',
 			},
 			{
 				image: `url(${PUBLIC_URL}/images/works/item7.jpg)`,
 				heading: 'Titles',
+				category: 'Writings',
 			},
 			{
 				image: `url(${PUBLIC_URL}/images/works/item8.jpg)`,
 				heading: 'Something',
+				category: 'Writings',
 			},
 			{
 				image: `url(${PUBLIC_URL}/images/works/item9.jpg)`,
 				heading: 'Reaction',
+				category: 'Video',
 			},
 			{
 				image: `url(${PUBLIC_URL}/images/works/item10.jpg)`,
 				heading: 'Miscelanious',
+				category: 'Video',
 			},
 		],
 	},
