@@ -8,6 +8,7 @@ import Houses, { routes as housesRoutes } from "~/pages/Houses";
 import Forest, { routes as forestRoutes } from "~/pages/Forest";
 import Contacts, { routes as contactsRoutes } from "~/pages/Contacts";
 import Rating from "~/pages/Rating";
+import Faq from "~/pages/Faq";
 
 import { base } from "~/constants";
 
@@ -44,6 +45,10 @@ const routes = [
 	{
 		path: `${base}rating/`,
 		element: <Rating />,
+	},
+	{
+		path: `${base}faq/`,
+		element: <Faq />,
 	},
 ];
 
