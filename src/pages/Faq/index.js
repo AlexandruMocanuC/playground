@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import WebFont from "webfontloader";
 
+import { base as projectBase } from "~/constants";
 const isProduction = process.env.NODE_ENV === "production";
 const PUBLIC_URL = isProduction ? `${projectBase}/static/faq` : "/faq";
 
