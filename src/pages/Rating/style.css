@@ -7,7 +7,7 @@
 }
 .container {
 	background-color: #000;
-	height: 100vh;
+	min-height: 100vh;
 	color: #ccc;
 	font-family: "Varela Round", sans-serif;
 	align-items: center;
@@ -16,6 +16,7 @@
 	font-size: 0.75rem;
 	letter-spacing: 0.5px;
 	line-height: 1.8;
+	padding: 2rem;
 }
 .rating_box {
 	background-color: var(--dark-blue);
