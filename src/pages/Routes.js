@@ -1,14 +1,15 @@
-import React from 'react';
-import { useRoutes, Outlet } from 'react-router-dom';
+import React from "react";
+import { useRoutes, Outlet } from "react-router-dom";
 
-import Home from '~/pages/Home';
-import Flamingo, { routes as flamingoRoutes } from '~/pages/Flamingo';
-import Travel, { routes as travelRoutes } from '~/pages/Travel';
-import Houses, { routes as housesRoutes } from '~/pages/Houses';
-import Forest, { routes as forestRoutes } from '~/pages/Forest';
-import Contacts, { routes as contactsRoutes } from '~/pages/Contacts';
+import Home from "~/pages/Home";
+import Flamingo, { routes as flamingoRoutes } from "~/pages/Flamingo";
+import Travel, { routes as travelRoutes } from "~/pages/Travel";
+import Houses, { routes as housesRoutes } from "~/pages/Houses";
+import Forest, { routes as forestRoutes } from "~/pages/Forest";
+import Contacts, { routes as contactsRoutes } from "~/pages/Contacts";
+import Rating from "~/pages/Rating";
 
-import { base } from '~/constants';
+import { base } from "~/constants";
 
 const routes = [
 	{
@@ -39,6 +40,10 @@ const routes = [
 		path: `${base}contacts/`,
 		element: <Contacts />,
 		children: contactsRoutes,
+	},
+	{
+		path: `${base}rating/`,
+		element: <Rating />,
 	},
 ];
 

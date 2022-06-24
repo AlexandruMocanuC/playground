@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { base } from '~/constants';
+import { base } from "~/constants";
 
-import $ from './style.css';
+import $ from "./style.css";
 
 const Home = () => (
 	<b>
@@ -13,6 +13,7 @@ const Home = () => (
 		<Link to={`${base}houses/`}>Houses</Link>
 		<Link to={`${base}forest/`}>Forest</Link>
 		<Link to={`${base}contacts/`}>Contacts</Link>
+		<Link to={`${base}rating/`}>Rating</Link>
 	</b>
 );
 
