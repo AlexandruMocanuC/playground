@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { menu } from './dbmenu';
+import React, { useState } from "react";
+import { menu } from "./dbmenu";
 
 const Menu = () => {
 	const [currentIndex, setIndex] = useState(0);

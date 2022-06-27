@@ -1,20 +1,20 @@
-import React, { useEffect } from 'react';
-import WebFont from 'webfontloader';
+import React, { useEffect } from "react";
+import WebFont from "webfontloader";
 
-import { Outlet } from 'react-router-dom';
+import { Outlet } from "react-router-dom";
 
-import { base } from '~/constants/flamingo';
+import { base } from "~/constants/flamingo";
 
-import Navigation from '~c/Flamingo/Navigation';
-import Footer from '~s/Flamingo/Footer';
-import Home from './Home';
-import Services from './Services';
-import About from './About';
-import Works from './Works';
-import Contact from './Contact';
-import Blog from './Blog';
-import Article from './Article';
-import Menu from '~c/Flamingo/Menu';
+import Navigation from "~c/Flamingo/Navigation";
+import Footer from "~s/Flamingo/Footer";
+import Home from "./Home";
+import Services from "./Services";
+import About from "./About";
+import Works from "./Works";
+import Contact from "./Contact";
+import Blog from "./Blog";
+import Article from "./Article";
+import Menu from "~c/Flamingo/Menu";
 
 export const routes = [
 	{ index: true, element: <Home /> },
@@ -27,19 +27,19 @@ export const routes = [
 		element: <About />,
 	},
 	{
-		path: 'works/',
+		path: "works/",
 		element: <Works />,
 	},
 	{
-		path: 'contact/',
+		path: "contact/",
 		element: <Contact />,
 	},
 	{
-		path: 'blog/',
+		path: "blog/",
 		element: <Blog />,
 	},
 	{
-		path: 'article/',
+		path: "article/",
 		element: <Article />,
 	},
 ];
@@ -48,11 +48,11 @@ const Flamingo = () => {
 	useEffect(() => {
 		WebFont.load({
 			google: {
-				families: ['Poppins:400,800', 'Roboto:400'],
+				families: ["Poppins:400,800", "Roboto:400"],
 			},
 		});
 
-		import('./style.scss');
+		import("./style.scss");
 	}, []);
 
 	return (
@@ -60,7 +60,6 @@ const Flamingo = () => {
 			<Navigation />
 			<Outlet />
 			<Footer />
-			<Menu />
 		</b>
 	);
 };
