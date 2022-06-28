@@ -55,29 +55,60 @@ const Home = () => {
 		<div className={$.container}>
 			<div className={$.header}>
 				<div className={$.row}>
-					<div className={$.subrow}>
-						<div className={$.heading}>
-							Hi, I’m Matt. Nice to meet you.
+					<div className={$.heading}>
+						Hi, I’m Alex. Nice to meet you.
+					</div>
+					<div className={$.intro}>
+						<div className={$.point}>The things I know:</div>
+						<div className={$.point}>
+							<i className="fas fa-circle"></i> experience
+							developing HTML & CSS templates
 						</div>
-						<div className={$.intro}>
-							Since beginning my journey as a freelance designer
-							nearly 10 years ago, I've done remote work for
-							agencies, consulted for startups, and collaborated
-							with talented people to create digital products for
-							both business and consumer use. I'm quietly
-							confident, naturally curious, and perpetually
-							working on improving my chops one design problem at
-							a time.
+						<div className={$.point}>
+							<i className="fas fa-circle"></i> experience
+							developing JavaScript based UIs
+						</div>
+						<div className={$.point}>
+							<i className="fas fa-circle"></i> experience
+							developing React components
+						</div>
+						<div className={$.point}>
+							<i className="fas fa-circle"></i> experience using
+							pre-processors PostCSS (CSS Modules), SASS / LESS
+						</div>
+						<div className={$.point}>
+							<i className="fas fa-circle"></i> experience with
+							CSS-in-JS Styled Components and Style JSX
+						</div>
+						<div className={$.point}>
+							<i className="fas fa-circle"></i> knowledge of style
+							guide development and pattern libraries
+						</div>
+						<div className={$.point}>
+							<i className="fas fa-circle"></i> knowledge of
+							component-based architecture
+						</div>
+						<div className={$.point}>
+							<i className="fas fa-circle"></i> cross-browser
+							responsive design with a mobile first approach
+						</div>
+						<div className={$.point}>
+							<i className="fas fa-circle"></i> basic
+							understanding of UI/UX design principles
+						</div>
+						<div className={$.point}>
+							<i className="fas fa-circle"></i> writing clean code
+							following industry standards (using prettier)
 						</div>
 					</div>
 				</div>
 			</div>
 			<div className={$.content}>
 				<div className={$.row}>
-					<div className={$.section_heading}>My Recent Work</div>
+					<div className={$.section_heading}>My Playground</div>
 					<div className={$.paragraph}>
-						Here are a few design projects I've worked on recently.
-						Want to see more?{" "}
+						Here are a few small projects I've worked on for my
+						portfolio. Want to work together?{" "}
 						<a
 							href="mailto:alexandru.mocanu.dev@gmail.com"
 							className={$.button}
