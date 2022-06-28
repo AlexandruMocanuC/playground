@@ -1,4 +1,4 @@
-:root {
+.container {
     --font-accent: "Crimson Text", serif;
     --font-primary: "Raleway", sans-serif;
     --orange: #dc8665;
@@ -6,8 +6,7 @@
     --purple: #534666;
     --pink: #cd7672;
     --white: #fff;
-}
-.container {
+
     font-family: var(--font-primary);
     font-size: 1.2rem;
     background-color: #ccc;

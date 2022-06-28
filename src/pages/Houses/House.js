@@ -1,53 +1,53 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import Room from './Room';
+import Room from "./Room";
 
-import $ from './rooms.scss';
+import $ from "./style.scss";
 
 const House = ({ house, onClose, onPrev, onNext }) => {
 	const [roomIndex, setRoomIndex] = useState(null);
 	return (
 		<>
-			<div className="house-modal">
-				<div className="content">
+			<div className={$.house_modal}>
+				<div className={$.content}>
 					<div
-						className="main bg-cover"
+						className={`${$.main} ${$.bg_cover}`}
 						style={{
 							backgroundImage: house.image,
 						}}
 					>
-						<div className="text">
-							<h1>{house.name}</h1>
-							<p>{house.description}</p>
+						<div className={$.text}>
+							<div className={$.h1}>{house.name}</div>
+							<div className={$.p}>{house.description}</div>
 						</div>
-						<div className="arrow-prev" onClick={() => onPrev()}>
+						<div className={$.arrow_prev} onClick={() => onPrev()}>
 							<i className="fas fa-chevron-left"></i>
 						</div>
-						<div className="arrow-next" onClick={() => onNext()}>
+						<div className={$.arrow_next} onClick={() => onNext()}>
 							<i className="fas fa-chevron-right"></i>
 						</div>
-						<div className="close" onClick={() => onClose()}>
+						<div className={$.close} onClick={() => onClose()}>
 							<i className="far fa-times-circle"></i>
 						</div>
 					</div>
-					<div className="sidebar">
-						<h2>Rooms</h2>
-						<div className="rooms">
+					<div className={$.sidebar}>
+						<div className={$.h2}>Rooms</div>
+						<div className={$.rooms}>
 							{house.rooms.map((room, index) => (
 								<div
-									className="room"
+									className={$.room}
 									key={index}
 									onClick={() => setRoomIndex(index)}
 								>
 									<div
-										className="image bg-cover"
+										className={`${$.image} ${$.bg_cover}`}
 										style={{
 											backgroundImage: room.image,
 										}}
 									>
-										<div className="pt-50"></div>
+										<div className={$.pt_50}></div>
 									</div>
-									<h3>{room.name}</h3>
+									<div className={$.h3}>{room.name}</div>
 								</div>
 							))}
 						</div>

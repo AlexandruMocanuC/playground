@@ -5,6 +5,8 @@ import { base as projectBase } from "~/constants";
 const isProduction = process.env.NODE_ENV === "production";
 const PUBLIC_URL = isProduction ? `${projectBase}/static/faq` : "/faq";
 
+import $ from "./style.scss";
+
 const faqs = [
 	{
 		heading: "Lorem ipsum",
@@ -41,46 +43,48 @@ const Faq = () => {
 				families: ["Varela+Round"],
 			},
 		});
-
-		import("./style.css");
 	}, []);
 
 	const [openedIndex, openAccordion] = useState(null);
 
 	return (
-		<div className="container">
-			<div className="box">
-				<div className="columns-2">
-					<div className="column">
+		<div className={$.container}>
+			<div className={$.box}>
+				<div className={$.columns_2}>
+					<div className={$.column}>
 						<div
-							className="image"
+							className={$.image}
 							style={{
 								backgroundImage: `url(${PUBLIC_URL}/faq.png)`,
 							}}
 						></div>
 					</div>
-					<div className="column">
-						<div className="title">faq</div>
+					<div className={$.column}>
+						<div className={$.title}>faq</div>
 						{faqs.map((faq, index) => (
 							<div
-								className={`accordion ${
-									openedIndex === index ? "is_open" : null
+								className={`${$.accordion} ${
+									openedIndex === index ? $.is_open : null
 								}`}
 								key={index}
 							>
 								<div
-									className="accordion_top"
+									className={$.accordion_top}
 									onClick={() =>
 										openedIndex === index
 											? openAccordion(null)
 											: openAccordion(index)
 									}
 								>
-									<div className="heading">{faq.heading}</div>
-									<i className="fas fa-chevron-down icon"></i>
+									<div className={$.heading}>
+										{faq.heading}
+									</div>
+									<i
+										className={`fas fa-chevron-down ${$.icon}`}
+									></i>
 								</div>
 								{openedIndex === index ? (
-									<div className="description">
+									<div className={$.description}>
 										{faq.description}
 									</div>
 								) : null}

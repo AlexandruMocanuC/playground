@@ -1,32 +1,40 @@
-import React from 'react';
-import Form from '~c/Flamingo/Form';
-import { contact } from './db';
+import React from "react";
+import Form from "~c/Flamingo/Form";
+import { contact } from "./db";
 
-import { PUBLIC_URL } from '~/constants/flamingo';
+import { PUBLIC_URL } from "~/constants/flamingo";
+
+import $ from "./style.scss";
 
 const Contact = () => (
 	<>
 		<div
-			className="bg-cover header-small"
+			className={`${$.bg_cover} ${$.header_small}`}
 			style={{
 				backgroundImage: contact.header.image,
 			}}
 		>
-			<h1>{contact.header.heading}</h1>
+			<div className={$.h1}>{contact.header.heading}</div>
 		</div>
-		<div className="bg-blue text-center section contact-section">
-			<div className="container mb-l">
-				<h2 className="mb-default">{contact.content.heading}</h2>
-				<h5>{contact.content.description}</h5>
+		<div
+			className={`${$.bg_blue} ${$.text_center} ${$.section} ${$.contact_section}`}
+		>
+			<div className={`${$.container} ${$.mb_l}`}>
+				<div className={`${$.h2} ${$.mb_default}`}>
+					{contact.content.heading}
+				</div>
+				<div className={$.h5}>{contact.content.description}</div>
 			</div>
-			<div className="container">
-				<div className="columns-3">
-					<div className="column text-center p-m">
-						<i className="fas fa-phone-alt icon-green mb-m"></i>
-						<h4 className="mb-m">
+			<div className={$.container}>
+				<div className={$.columns_3}>
+					<div className={`${$.column} ${$.text_center} ${$.p_m}`}>
+						<i
+							className={`fas fa-phone-alt ${$.icon_green} ${$.mb_m}`}
+						></i>
+						<div className={`${$.h4} ${$.mb_m}`}>
 							{contact.content.columns.column1.heading}
-						</h4>
-						<div className="mb-default">
+						</div>
+						<div className={$.mb_default}>
 							<a
 								href={
 									contact.content.columns.column1.buttons
@@ -53,29 +61,33 @@ const Contact = () => (
 							</a>
 						</div>
 					</div>
-					<div className="column text-center p-m">
-						<i className="fas fa-map-marker-alt icon-green mb-m"></i>
-						<h4 className="mb-m">
+					<div className={`${$.column} ${$.text_center} ${$.p_m}`}>
+						<i
+							className={`fas fa-map-marker-alt ${$.icon_green} ${$.mb_m}`}
+						></i>
+						<div className={`${$.h4} ${$.mb_m}`}>
 							{contact.content.columns.column2.heading}
-						</h4>
+						</div>
 						<div>
-							<p className="mb-default">
+							<p className={$.mb_default}>
 								{contact.content.columns.column2.description}
 							</p>
 						</div>
 					</div>
-					<div className="column text-center p-m">
-						<i className="fas fa-envelope-open-text icon-green mb-m"></i>
-						<h4 className="mb-m">
+					<div className={`${$.column} ${$.text_center} ${$.p_m}`}>
+						<i
+							className={`fas fa-envelope-open-text ${$.icon_green} ${$.mb_m}`}
+						></i>
+						<div className={`${$.h4} ${$.mb_m}`}>
 							{contact.content.columns.column3.heading}
-						</h4>
+						</div>
 						<div>
 							<a
 								href={
 									contact.content.columns.column3.buttons
 										.button1.link
 								}
-								className="mb-default"
+								className={$.mb_default}
 							>
 								{
 									contact.content.columns.column3.buttons
@@ -100,12 +112,14 @@ const Contact = () => (
 				</div>
 			</div>
 		</div>
-		<div className="bg-grey section">
-			<div className="container mb-l text-center">
-				<h2 className="mb-default">{contact.form.heading}</h2>
-				<h5>{contact.form.description}</h5>
+		<div className={`${$.bg_grey} ${$.section}`}>
+			<div className={`${$.container} ${$.mb_l} ${$.text_center}`}>
+				<div className={`${$.h2} ${$.mb_default}`}>
+					{contact.form.heading}
+				</div>
+				<div className={$.h5}>{contact.form.description}</div>
 			</div>
-			<div className="container">
+			<div className={$.container}>
 				<Form />
 			</div>
 		</div>

@@ -1,4 +1,4 @@
-:root {
+.houses {
 	--gold: rgb(218, 165, 32);
 	--white: #fff;
 	--black: #000;
@@ -17,34 +17,33 @@
 	--size-m: 38px;
 	--size-l: 54px;
 
-	--family: 'Montserrat Alternates', sans-serif;
-}
-.houses {
+	--family: "Montserrat Alternates", sans-serif;
+
 	font-family: var(--family);
 	font-size: var(--size-s);
 	color: var(--white);
 	background-color: var(--brown);
 }
-h1 {
+.h1 {
 	font-size: var(--size-l);
 	font-weight: 700;
 	line-height: 1.4;
 }
-h2 {
+.h2 {
 	font-size: var(--size-m);
 	font-weight: 700;
 	line-height: 1.4;
 }
-h3 {
+.h3 {
 	font-size: var(--size-s);
 	font-weight: 700;
 	line-height: 1.4;
 }
-p {
+.p {
 	margin-top: 0;
 	margin-bottom: 0;
 }
-.bg-cover {
+.bg_cover {
 	background-size: cover;
 	background-position: center;
 }
@@ -52,13 +51,13 @@ p {
 	padding: var(--space-m);
 	width: 100%;
 }
-.columns-2 {
+.columns_2 {
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: calc(var(--space-s) * -1);
 	margin-right: calc(var(--space-s) * -1);
 }
-.columns-2 .column {
+.columns_2 .column {
 	width: 50%;
 	padding: var(--space-s);
 	position: relative;
@@ -73,7 +72,7 @@ p {
 	border-bottom: 3px solid var(--white);
 }
 .header:before {
-	content: '';
+	content: "";
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -81,12 +80,12 @@ p {
 	position: absolute;
 	background-color: var(--overlay);
 }
-.header h1 {
+.header .h1 {
 	position: relative;
 	width: 60%;
 	text-align: center;
 }
-.pt-50 {
+.pt_50 {
 	padding-top: 50%;
 }
 .logo {
@@ -104,11 +103,11 @@ p {
 	z-index: 10;
 	left: 0;
 }
-.details h2 {
+.details .h2 {
 	margin-bottom: var(--space-s);
 }
 .house:after {
-	content: '';
+	content: "";
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -118,14 +117,14 @@ p {
 	transition: all 0.2s ease-in-out;
 }
 .house,
-.house .bg-cover {
+.house .bg_cover {
 	border-radius: var(--radius);
 	overflow: hidden;
 }
 .house:hover:after {
 	background-color: var(--overlay-dark);
 }
-.details span {
+.details .span {
 	padding: 0 var(--space-s);
 	text-transform: capitalize;
 }
@@ -156,6 +155,26 @@ p {
 	flex-wrap: wrap;
 	height: 100vh;
 }
+.content_room {
+	padding: var(--space-s);
+	display: flex;
+	flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column;
+	padding: var(--space-m) calc(var(--space-m) * 2);
+	position: relative;
+	height: calc(100vh - 2 * var(--space-s));
+}
+.content_room .h2 {
+	position: absolute;
+	bottom: var(--space-m);
+	text-align: center;
+	left: 0;
+	right: 0;
+	padding: 0 var(--space-m);
+}
 .content .sidebar {
 	width: 500px;
 	background-color: var(--white);
@@ -176,7 +195,7 @@ p {
 	height: calc(100vh - 2 * var(--space-s));
 }
 .content .main:after {
-	content: '';
+	content: "";
 	background-color: var(--overlay);
 	left: 0;
 	right: 0;
@@ -188,7 +207,16 @@ p {
 	position: relative;
 	z-index: 2;
 }
-.arrow-prev {
+.rooms_modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 11;
+	background-color: var(--brown);
+}
+.arrow_prev {
 	position: absolute;
 	left: var(--space-s);
 	padding: var(--space-s);
@@ -197,7 +225,7 @@ p {
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
 }
-.arrow-next {
+.arrow_next {
 	position: absolute;
 	right: var(--space-s);
 	padding: var(--space-s);
@@ -206,8 +234,8 @@ p {
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
 }
-.arrow-next:hover,
-.arrow-prev:hover {
+.arrow_next:hover,
+.arrow_prev:hover {
 	background-color: var(--overlay);
 	border-radius: var(--radius-button);
 	color: var(--gold);
@@ -224,22 +252,16 @@ p {
 .close:hover {
 	color: var(--gold);
 }
-.room {
-	margin: var(--space-s);
+
+.content_room .image {
+	background-position: center;
+	background-size: cover;
+	width: 50%;
+	height: 50%;
+	margin-left: auto;
+	margin-right: auto;
 }
-.room .image {
-	border-radius: var(--radius);
-}
-.room h3 {
-	margin-top: var(--space-s);
-}
-.sidebar h2 {
-	padding-left: var(--space-s);
-}
-.content h1 {
-	margin-bottom: var(--space-s);
-}
-.house-modal {
+.house_modal {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -248,28 +270,85 @@ p {
 	z-index: 11;
 	background-color: var(--brown);
 }
+.room {
+	margin: var(--space-s);
+}
+.room .image {
+	border-radius: var(--radius);
+}
+.room .h3 {
+	margin-top: var(--space-s);
+}
+.sidebar .h2 {
+	padding-left: var(--space-s);
+}
+.content .h1 {
+	margin-bottom: var(--space-s);
+}
+.search {
+	position: absolute;
+	top: var(--space-s);
+	right: var(--space-m);
+	display: flex;
+	font-size: var(--size-m);
+	align-items: center;
+}
+.search_icon {
+	margin-left: var(--space-s);
+	cursor: pointer;
+	padding: calc(var(--space-s) / 2);
+}
+.search .input {
+	font-size: var(--space-s);
+	font-family: var(--family);
+	border: 0 none;
+	padding: var(--space-s);
+	background-color: transparent;
+	font-weight: 700;
+	border-bottom: 2px solid var(--white);
+	transition: background-color 0.2s ease-in-out;
+	border-radius: var(--radius);
+}
+.search .input:focus-visible {
+	outline: none;
+}
+.search .input:focus {
+	background-color: var(--overlay-dark);
+}
+.no_results {
+	text-align: center;
+	text-transform: uppercase;
+	padding: var(--space-m);
+}
+.no_results .p {
+	margin-top: var(--space-m);
+}
 
 @media (max-width: 1400px) {
-	:root {
+	.houses {
 		--space-m: 30px;
 	}
 }
 @media (max-width: 1200px) {
-	:root {
+	.houses {
 		--size-m: 24px;
 		--size-l: 38px;
 	}
 	.details .button {
 		padding: calc(var(--space-s) / 2) var(--space-s);
 	}
-	.arrow-next {
+	.arrow_next {
 		right: 0;
 	}
-	.arrow-prev {
+	.arrow_prev {
 		left: 0;
 	}
 }
 @media (max-width: 1024px) {
+	.content_room .image {
+		width: 600px;
+		height: 300px;
+	}
 	.house .hover {
 		display: block;
 	}
@@ -293,10 +372,24 @@ p {
 	}
 }
 @media (max-width: 800px) {
-	:root {
+	.houses {
 		--size-l: 24px;
 	}
-	.details span {
+	.search .input {
+		padding: calc(var(--space-s) / 2);
+	}
+	.content_room .image {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+	.content_room .image:after {
+		content: "";
+		width: 100%;
+		padding-top: 60%;
+		display: block;
+	}
+	.details .span {
 		display: block;
 		margin-bottom: calc(var(--space-s) / 2);
 		padding: 0;
@@ -330,7 +423,7 @@ p {
 	.header {
 		height: 250px;
 	}
-	.columns-2 .column {
+	.columns_2 .column {
 		width: 100%;
 	}
 }
@@ -338,7 +431,7 @@ p {
 	.header {
 		height: auto;
 	}
-	.header h1 {
+	.header .h1 {
 		padding: 60px 0;
 	}
 	.logo {
@@ -348,6 +441,9 @@ p {
 		z-index: 11;
 	}
 	.content .sidebar {
+		display: none;
+	}
+	.search {
 		display: none;
 	}
 }

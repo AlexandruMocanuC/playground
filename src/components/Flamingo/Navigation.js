@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useResolvedPath, useMatch } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, useResolvedPath, useMatch } from "react-router-dom";
 
-import { base } from '~/constants/flamingo';
-import { nav } from './db';
+import { base } from "~/constants/flamingo";
+import { nav } from "./db";
+
+import $ from "./navigation.css";
 
 const Navigation = () => {
 	const [search, toggleSearch] = useState(false);
-	useEffect(() => {
-		import('./navigation.css');
-	}, []);
+
 	return (
-		<div className="navigation">
-			<div className="logo">
+		<div className={$.navigation}>
+			<div className={$.logo}>
 				<Link to={base}>
 					<img src={nav.logo} />
 				</Link>
 			</div>
 
-			<div className="menu flex">
+			<div className={`${$.menu} ${$.flex}`}>
 				{nav.menu.map((item, index) => {
 					let resolved = useResolvedPath(item.link);
 					let match = useMatch({
@@ -29,8 +29,8 @@ const Navigation = () => {
 						<div
 							className={
 								match !== null
-									? 'menu-item-active'
-									: 'menu-item'
+									? $.menu_item_active
+									: $.menu_item
 							}
 							key={index}
 						>
@@ -39,13 +39,13 @@ const Navigation = () => {
 					);
 				})}
 				<div>
-					<Link to={nav.contact.link} className="button">
+					<Link to={nav.contact.link} className={$.button}>
 						{nav.contact.text}
 					</Link>
 				</div>
 				{nav.search === true ? (
 					<div
-						className="search"
+						className={$.search}
 						onClick={() => toggleSearch(!search)}
 					>
 						<a href="#">
@@ -54,7 +54,7 @@ const Navigation = () => {
 					</div>
 				) : null}
 
-				{search === true ? 'search is on' : ''}
+				{search === true ? "search is on" : ""}
 			</div>
 		</div>
 	);

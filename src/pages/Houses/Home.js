@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import { home } from './db';
-import House from './House';
+import React, { useState } from "react";
+import { home } from "./db";
+import House from "./House";
 
-import $ from './search.scss';
+import $ from "./style.scss";
 
 const Home = () => {
 	const [houseIndex, setHouseIndex] = useState(null);
 
 	const [isInputVisible, toggleInput] = useState(false);
 
-	const [searchValue, setSearchValue] = useState('');
+	const [searchValue, setSearchValue] = useState("");
 	const filteredHouses =
-		searchValue !== ''
+		searchValue !== ""
 			? home.houses.filter(house =>
 					house.details.find(
 						detail =>
-							detail.name === 'rooms' &&
+							detail.name === "rooms" &&
 							detail.value === searchValue
 					)
 			  )
@@ -23,26 +23,27 @@ const Home = () => {
 
 	const handleSearchIcon = () => {
 		if (isInputVisible === true) {
-			setSearchValue('');
+			setSearchValue("");
 		}
 		toggleInput(!isInputVisible);
 	};
 
 	return (
-		<div className="houses">
+		<div className={$.houses}>
 			<div
-				className="header bg-cover"
+				className={`${$.header} ${$.bg_cover}`}
 				style={{
 					backgroundImage: home.header.image,
 				}}
 			>
-				<div className="logo">
+				<div className={$.logo}>
 					<img src={home.header.logo} />
 				</div>
 				<div className={$.search}>
 					{isInputVisible === true ? (
 						<div className={$.search_input}>
 							<input
+								className={$.input}
 								autoFocus
 								onChange={event =>
 									setSearchValue(event.target.value)
@@ -64,37 +65,45 @@ const Home = () => {
 						)}
 					</div>
 				</div>
-				<h1>{home.header.heading}</h1>
+				<div className={$.h1}>{home.header.heading}</div>
 			</div>
 			{filteredHouses.length !== 0 ? (
-				<div className="container">
-					<div className="columns-2">
+				<div className={$.container}>
+					<div className={$.columns_2}>
 						{filteredHouses.map((house, index) => (
-							<div className="column house" key={index}>
+							<div
+								className={`${$.column} ${$.house}`}
+								key={index}
+							>
 								<div
-									className="bg-cover"
+									className={$.bg_cover}
 									style={{
 										backgroundImage: house.image,
 									}}
 								>
-									<div className="pt-50"></div>
+									<div className={$.pt_50}></div>
 								</div>
-								<div className="details">
-									<h2>{house.name}</h2>
-									<p>{house.description}</p>
-									<div className="hover">
+								<div className={$.details}>
+									<div className={$.h2}>{house.name}</div>
+									<div className={$.p}>
+										{house.description}
+									</div>
+									<div className={$.hover}>
 										<span
-											className="button"
+											className={`${$.button} ${$.span}`}
 											onClick={() => setHouseIndex(index)}
 										>
 											See house
 										</span>
 										<div>
 											{house.details.map((item, key) => (
-												<span key={key}>
+												<span
+													className={$.span}
+													key={key}
+												>
 													{item.name}: {item.value}
-													{item.name === 'space'
-														? 'mp'
+													{item.name === "space"
+														? "mp"
 														: null}
 												</span>
 											))}
@@ -107,13 +116,13 @@ const Home = () => {
 				</div>
 			) : (
 				<div className={$.no_results}>
-					<h2>SORRY,</h2>
-					<h2>No houses found</h2>
-					<h2>:(</h2>
-					<p>
+					<div className={$.h2}>SORRY,</div>
+					<div className={$.h2}>No houses found</div>
+					<div className={$.h2}>:(</div>
+					<div className={$.p}>
 						Seems that no house with that many rooms was found in
 						our database!
-					</p>
+					</div>
 				</div>
 			)}
 			{houseIndex !== null ? (

@@ -1,20 +1,81 @@
-.about-section .columns-2 {
+.width_80 {
+	width: 80%;
+}
+.mb_default {
+	margin-bottom: var(--space-default);
+}
+.bg_cover {
+	background-size: cover;
+	background-position: center;
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--overlay);
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.h4 {
+	font-family: var(--family-accent);
+	font-size: var(--size-m);
+	font-weight: 600;
+	line-height: 1.2;
+}
+.columns_2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.columns_2 .column {
+	width: calc(50% - var(--space-default) / 2);
+}
+.columns_3 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.columns_3 .column {
+	width: calc(100% / 3 - var(--space-default) * 2 / 3);
+	margin-bottom: var(--space-default);
+}
+
+.columns_2_v {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+.columns_2_v .column {
+	width: 100%;
+	height: calc(50% - var(--space-default) / 2);
+}
+.columns_2 {
 	height: 640px;
 }
-.about-section .overlay {
+.overlay {
 	opacity: 0.5;
 }
-.about-section .column {
+.column {
 	position: relative;
 }
-.about-section .column:hover > .overlay {
+.p_default {
+	padding: var(--space-default);
+}
+.column:hover > .overlay {
 	opacity: 1;
 }
-.about-section .columns-3 .column {
+.columns_3 .column {
 	position: relative;
 }
-.about-section .columns-3 .column:not(:nth-child(3n)):before {
-	content: '';
+.columns_3 .column:not(:nth-child(3n)):before {
+	content: "";
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -28,20 +89,34 @@
 	position: absolute;
 }
 @media (max-width: 1200px) {
-	.about-section .columns-2 {
+	.columns_2 {
 		height: 500px;
 	}
 }
 @media (max-width: 800px) {
-	.about-section .columns-2 {
+	.columns_2 {
 		height: 350px;
 	}
 }
 @media (max-width: 640px) {
-	.about-section .columns-2 {
+	.columns_3,
+	.columns_2 {
+		max-width: var(--container);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.columns_3 .column,
+	.columns_2 .column {
+		width: 100%;
+		min-height: 200px;
+	}
+	.columns_2 {
 		display: none;
 	}
-	.about-section .columns-3 .column:not(:nth-child(3n)):before {
+	.columns_3 .column:not(:nth-child(3n)):before {
 		display: none;
+	}
+	.width_80 {
+		width: 100%;
 	}
 }

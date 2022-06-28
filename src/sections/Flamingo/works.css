@@ -2,23 +2,45 @@
 	display: flex;
 }
 .work {
+	background-size: cover;
+	background-position: center;
 	height: 500px;
 	transition: width 0.2s linear;
 	position: relative;
 	flex-grow: 1;
 	transition: all 0.2s ease-in-out;
 }
+.h4 {
+	font-family: var(--family-accent);
+	font-size: var(--size-m);
+	font-weight: 600;
+	line-height: 1.2;
+}
 .work:hover {
 	flex-grow: 3;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--overlay);
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .work:hover .overlay {
 	opacity: 1;
 }
-.work .overlay h4 {
+.work .overlay .h4 {
 	margin-top: 100px;
 	transition: all 0.2s ease-in-out;
 }
-.work:hover .overlay h4 {
+.work:hover .overlay .h4 {
 	margin-top: 0;
 }
 @media (max-width: 1200px) {

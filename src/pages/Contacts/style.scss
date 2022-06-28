@@ -1,4 +1,4 @@
-:root {
+.contacts {
 	--white: #fff;
 	--black: #000;
 	--facebook: #4267b2;
@@ -23,99 +23,96 @@
 
 	--transition: all 0.2s ease-in-out;
 
-	--family: 'Montserrat Alternates', sans-serif;
+	--family: "Montserrat Alternates", sans-serif;
 
 	--size-s: 18px;
 	--size-m: 24px;
 	--size-l: 36px;
+
+	font-family: var(--family);
+	font-size: var(--size-s);
+	background-color: var(--light-red);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-:local {
-	.contacts {
-		font-family: var(--family);
-		font-size: var(--size-s);
-		background-color: var(--light-red);
-		height: 100vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
 
-	.contacts h1 {
-		font-size: var(--size-l);
-		font-weight: 700;
-		line-height: 1.6;
-	}
-	.contacts h2 {
-		font-size: var(--size-m);
-		font-weight: 700;
-		line-height: 1.6;
-	}
-	.contacts h3 {
-		font-size: var(--size-s);
-		font-weight: 700;
-		line-height: 1.6;
-	}
+.contacts h1 {
+	font-size: var(--size-l);
+	font-weight: 700;
+	line-height: 1.6;
+}
+.contacts h2 {
+	font-size: var(--size-m);
+	font-weight: 700;
+	line-height: 1.6;
+}
+.contacts h3 {
+	font-size: var(--size-s);
+	font-weight: 700;
+	line-height: 1.6;
+}
 
+.contacts .mobile {
+	width: 600px;
+	height: 90vh;
+	background-color: var(--white);
+	overflow-y: auto;
+	overflow-x: hidden;
+	border-radius: var(--radius);
+	padding: var(--space-m);
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	position: relative;
+}
+
+.contacts .mobile::-webkit-scrollbar {
+	display: none;
+}
+
+.contacts .mobile h1 {
+	margin-bottom: var(--space-m);
+}
+
+.contacts .mobile .search_icon {
+	position: absolute;
+	top: var(--space-m);
+	right: var(--space-m);
+	cursor: pointer;
+}
+.search input {
+	border: 0 none;
+	width: 100%;
+	margin-bottom: var(--space-s);
+	padding: var(--space-button);
+	font-size: var(--size-s);
+	font-family: var(--family);
+	border-bottom: 1px solid var(--light-grey);
+}
+.search input:focus-visible {
+	outline: 0 none;
+}
+.search input:focus {
+	border-bottom-color: var(--black);
+}
+
+.no_results {
+	text-align: center;
+	margin-top: var(--space-m);
+	text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
 	.contacts .mobile {
-		width: 600px;
-		height: 90vh;
-		background-color: var(--white);
-		overflow-y: auto;
-		overflow-x: hidden;
-		border-radius: var(--radius);
-		padding: var(--space-m);
-		-ms-overflow-style: none;
-		scrollbar-width: none;
-		position: relative;
-	}
-
-	.contacts .mobile::-webkit-scrollbar {
-		display: none;
-	}
-
-	.contacts .mobile h1 {
-		margin-bottom: var(--space-m);
-	}
-
-	.contacts .mobile .search_icon {
-		position: absolute;
-		top: var(--space-m);
-		right: var(--space-m);
-		cursor: pointer;
-	}
-	.search input {
-		border: 0 none;
 		width: 100%;
-		margin-bottom: var(--space-s);
-		padding: var(--space-button);
-		font-size: var(--size-s);
-		font-family: var(--family);
-		border-bottom: 1px solid var(--light-grey);
+		height: 100%;
+		border-radius: 0;
 	}
-	.search input:focus-visible {
-		outline: 0 none;
-	}
-	.search input:focus {
-		border-bottom-color: var(--black);
-	}
-
-	.no_results {
-		text-align: center;
-		margin-top: var(--space-m);
-		text-transform: uppercase;
-	}
-
-	@media (max-width: 640px) {
-		.contacts .mobile {
-			width: 100%;
-			height: 100%;
-			border-radius: 0;
-		}
-	}
-	@media (max-width: 414px) {
-		:root {
-			--space-m: 15px;
-			--space-button: 5px 15px;
-		}
+}
+@media (max-width: 414px) {
+	.contacts {
+		--space-m: 15px;
+		--space-button: 5px 15px;
 	}
 }

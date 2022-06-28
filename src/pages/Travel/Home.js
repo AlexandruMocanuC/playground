@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { Link } from 'react-router-dom';
-import { continents } from './db';
+import { Link } from "react-router-dom";
+import { continents } from "./db";
+
+import $ from "./style.scss";
 
 const TravelHome = () => {
 	const [continent, setContinent] = useState(0);
@@ -12,19 +14,19 @@ const TravelHome = () => {
 	};
 	return (
 		<div
-			className="travel"
+			className={$.travel}
 			style={{
 				backgroundImage: continents[continent].countries[country].image,
 			}}
 		>
-			<div className="sidebar">
+			<div className={$.sidebar}>
 				{continents.map((item, index) => (
-					<div className="continents" key={index}>
+					<div className={$.continents} key={index}>
 						<h1>{item.name}</h1>
 						{item.countries.map((c, key) => (
 							<div key={key}>
 								{index === continent && key === country ? (
-									<h2 className="country">
+									<h2 className={$.country}>
 										<span
 											style={{
 												backgroundImage: c.flag,
@@ -34,7 +36,7 @@ const TravelHome = () => {
 									</h2>
 								) : (
 									<h3
-										className="country"
+										className={$.country}
 										onClick={() =>
 											selectCountry(index, key)
 										}
@@ -52,20 +54,23 @@ const TravelHome = () => {
 					</div>
 				))}
 			</div>
-			<div className="main">
+			<div className={$.main}>
 				<h2>Top Cities</h2>
-				<div className="columns-2">
+				<div className={$.columns_2}>
 					{continents[continent].countries[country].cities.map(
 						(city, index) => (
-							<div className="column city" key={index}>
+							<div
+								className={`${$.column} ${$.city}`}
+								key={index}
+							>
 								<h3>{city.name}</h3>
 								<div
-									className="city-image"
+									className={$.city_image}
 									style={{
 										backgroundImage: city.image,
 									}}
 								>
-									<div className="fill"></div>
+									<div className={$.fill}></div>
 								</div>
 							</div>
 						)

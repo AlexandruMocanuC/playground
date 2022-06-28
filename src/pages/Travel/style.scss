@@ -1,4 +1,4 @@
-:root {
+.travel {
 	--grey: #aaa;
 	--white: #fff;
 	--size-s: 18px;
@@ -8,10 +8,9 @@
 	--space-m: 40px;
 	--space-l: 100px;
 	--radius: 10px;
-	--family: 'Varela Round', sans-serif;
+	--family: "Varela Round", sans-serif;
 	--overlay: rgba(0, 0, 0, 0.5);
-}
-.travel {
+
 	min-height: 100vh;
 	background-size: cover;
 	background-position: center;
@@ -25,7 +24,7 @@
 	transition: all 0.2s ease-in-out;
 }
 .travel:before {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -41,13 +40,13 @@
 	position: relative;
 	width: calc(100% / 3 * 2);
 }
-.columns-2 {
+.columns_2 {
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: calc(var(--space-s) * -1);
 	margin-right: calc(var(--space-s) * -1);
 }
-.columns-2 .column {
+.columns_2 .column {
 	width: 50%;
 	padding: var(--space-s);
 }
@@ -85,15 +84,15 @@ h3 {
 .city h3 {
 	margin-bottom: var(--space-s);
 }
-.city-image {
+.city_image {
 	background-size: cover;
 	background-position: center;
 	border-radius: var(--radius);
 	border: 3px solid var(--white);
 	position: relative;
 }
-.city-image:after {
-	content: '';
+.city_image:after {
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -103,7 +102,7 @@ h3 {
 	transition: all 0.2s ease-in-out;
 	border-radius: var(--radius);
 }
-.city-image:hover:after {
+.city_image:hover:after {
 	opacity: 0;
 }
 .fill {

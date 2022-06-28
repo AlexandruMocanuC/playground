@@ -1,38 +1,38 @@
-const path = require('path');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-const isProduction = process.env.NODE_ENV === 'production';
-const repository = 'playground';
+const isProduction = process.env.NODE_ENV === "production";
+const repository = "playground";
 const publicURL = isProduction
   ? `https://elenapavel.github.io/${repository}`
-  : '';
-const base = isProduction ? '/playground' : '';
+  : "";
+const base = isProduction ? "/playground" : "";
 
 const port = process.env.PORT || 3000;
 
 module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
+  mode: "development",
+  entry: "./src/index.js",
   output: {
-    filename: 'bundle.[hash].js',
-    publicPath: '/',
+    filename: "bundle.[hash].js",
+    publicPath: "/",
   },
   resolve: {
-    modules: [path.join(__dirname, 'src'), 'node_modules'],
+    modules: [path.join(__dirname, "src"), "node_modules"],
     alias: {
-      '~': path.join(__dirname, 'src'),
-      '~c': path.join(__dirname, 'src', 'components'),
-      '~s': path.join(__dirname, 'src', 'sections'),
+      "~": path.join(__dirname, "src"),
+      "~c": path.join(__dirname, "src", "components"),
+      "~s": path.join(__dirname, "src", "sections"),
     },
   },
   devServer: {
-    host: 'localhost',
+    host: "localhost",
     port: port,
     historyApiFallback: true,
     open: true,
     hot: true,
   },
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   module: {
     rules: [
       {
@@ -40,19 +40,19 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: "babel-loader",
           },
         ],
       },
       {
         test: /\.css$/,
         use: [
-          'style-loader',
+          "style-loader",
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               modules: {
-                mode: 'global',
+                mode: "local",
               },
               sourceMap: true,
             },
@@ -62,20 +62,20 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          'style-loader',
+          "style-loader",
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               modules: {
-                mode: 'global',
+                mode: "local",
               },
               sourceMap: true,
               importLoaders: 2,
             },
           },
-          'postcss-loader',
+          "postcss-loader",
           {
-            loader: 'sass-loader',
+            loader: "sass-loader",
             options: {
               sourceMap: true,
             },
@@ -86,7 +86,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: 'src/index.html',
+      template: "src/index.html",
     }),
   ],
 };

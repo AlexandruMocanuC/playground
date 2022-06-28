@@ -1,19 +1,29 @@
-.progress-bar {
+.h4 {
+	font-family: var(--family-accent);
+	font-size: var(--size-m);
+	font-weight: 600;
+	line-height: 1.2;
+}
+.progress_bar {
 	width: 100%;
 	position: relative;
 	padding-bottom: var(--space-default);
 	margin-bottom: var(--space-m);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
 }
-.progress-bar:before {
-	content: '';
+.progress_bar:before {
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	border-bottom: 3px solid var(--black);
 }
-.progress-bar-90:after {
-	content: '';
+.progress_bar_90:after {
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -21,8 +31,8 @@
 	border-bottom: 3px solid var(--green);
 	width: 90%;
 }
-.progress-bar-60:after {
-	content: '';
+.progress_bar_60:after {
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -30,8 +40,8 @@
 	border-bottom: 3px solid var(--green);
 	width: 60%;
 }
-.progress-bar-80:after {
-	content: '';
+.progress_bar_80:after {
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -39,8 +49,8 @@
 	border-bottom: 3px solid var(--green);
 	width: 80%;
 }
-.progress-bar-70:after {
-	content: '';
+.progress_bar_70:after {
+	content: "";
 	position: absolute;
 	left: 0;
 	right: 0;

@@ -1,11 +1,10 @@
-:root {
+.container {
 	--orange: #ffa500;
 	--dark-orange: #ff8c00;
-	--blue: #acacdb; /*#a8a8df*/
-	--dark-blue: #242454; /*//#2a2a63//#35357c*/
+	--blue: #acacdb;
+	--dark-blue: #242454;
 	--light-blue: #35357c;
-}
-.container {
+
 	background-color: #000;
 	min-height: 100vh;
 	color: #ccc;

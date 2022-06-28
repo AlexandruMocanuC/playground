@@ -1,4 +1,4 @@
-:root {
+.container {
 	--orange: #e6a441;
 	--purple: #a56be3;
 	--blue: #5364ed;
@@ -8,9 +8,7 @@
 	--black: #000;
 
 	--transition: 0.2s all ease-in-out;
-}
 
-.container {
 	min-height: 100vh;
 	padding: 2rem;
 	display: flex;
@@ -30,13 +28,13 @@
 	margin-top: 75px;
 	padding-top: 75px;
 }
-.columns-2 {
+.columns_2 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	padding: 2rem;
 }
-.columns-2 .column {
+.columns_2 .column {
 	width: 100%;
 	position: relative;
 }
@@ -90,7 +88,7 @@
 		left: 0;
 		right: 0;
 	}
-	.columns-2 {
+	.columns_2 {
 		padding: 5rem;
 	}
 	.box {
@@ -99,7 +97,7 @@
 	}
 }
 @media (min-width: 1024px) {
-	.columns-2 .column {
+	.columns_2 .column {
 		width: 50%;
 	}
 	.image {

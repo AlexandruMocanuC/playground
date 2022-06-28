@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import $ from './rooms.scss';
+import $ from "./style.scss";
 
 const Room = ({
 	image,
-	description = 'Lorem ipsum dolor sit amet',
+	description = "Lorem ipsum dolor sit amet",
 	onClose,
 	onPrev,
 	onNext,
 }) => {
 	return (
 		<div className={$.rooms_modal}>
-			<div className={$.content}>
+			<div className={$.content_room}>
 				<div className={$.image} style={{ backgroundImage: image }} />
 				<div className={$.arrow_prev} onClick={() => onPrev()}>
 					<i className="fas fa-chevron-left"></i>
@@ -22,7 +22,7 @@ const Room = ({
 				<div className={$.close} onClick={() => onClose()}>
 					<i className="far fa-times-circle"></i>
 				</div>
-				<h2>{description}</h2>
+				<div className={$.h2}>{description}</div>
 			</div>
 		</div>
 	);

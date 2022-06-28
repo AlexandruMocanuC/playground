@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { works } from './db';
+import React, { useState } from "react";
+import { works } from "./db";
+
+import $ from "./style.scss";
 
 const Works = () => {
 	const [category, setCategory] = useState(null);
@@ -22,28 +24,32 @@ const Works = () => {
 	return (
 		<>
 			<div
-				className="bg-cover header-small"
+				className={`${$.bg_cover} ${$.header_small}`}
 				style={{
 					backgroundImage: works.header.image,
 				}}
 			>
-				<h1>{works.header.heading}</h1>
+				<div className={$.h1}>{works.header.heading}</div>
 			</div>
-			<div className="bg-blue section">
-				<div className="container">
-					<div className="text-center mb-m">
-						<h2 className="mb-default">{works.content.heading}</h2>
-						<h5 className="mb-m">{works.content.description}</h5>
-						<div className="categories">
+			<div className={`${$.bg_blue} ${$.section}`}>
+				<div className={$.container}>
+					<div className={`${$.text_center} ${$.mb_m}`}>
+						<div className={`${$.mb_default} ${$.h2}`}>
+							{works.content.heading}
+						</div>
+						<div className={`${$.mb_m} ${$.h5}`}>
+							{works.content.description}
+						</div>
+						<div className={$.categories}>
 							<div
-								className="button"
+								className={$.button}
 								onClick={() => setCategory(null)}
 							>
 								ALL
 							</div>
 							{categories.map((category, index) => (
 								<div
-									className="button"
+									className={$.button}
 									key={index}
 									onClick={() => setCategory(category)}
 								>
@@ -52,17 +58,17 @@ const Works = () => {
 							))}
 						</div>
 					</div>
-					<div className="columns-2">
+					<div className={$.columns_2}>
 						{filteredWorks.map((column, index) => (
 							<div
 								style={{
 									backgroundImage: column.image,
 								}}
-								className="column mb-default work-height bg-cover"
+								className={`${$.column} ${$.mb_default} ${$.work_height} ${$.bg_cover}`}
 								key={index}
 							>
-								<div className="overlay">
-									<h4>{column.heading}</h4>
+								<div className={$.overlay}>
+									<div className={$.h4}>{column.heading}</div>
 								</div>
 							</div>
 						))}

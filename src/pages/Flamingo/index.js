@@ -16,6 +16,8 @@ import Blog from "./Blog";
 import Article from "./Article";
 import Menu from "~c/Flamingo/Menu";
 
+import $ from "./style.scss";
+
 export const routes = [
 	{ index: true, element: <Home /> },
 	{
@@ -51,16 +53,14 @@ const Flamingo = () => {
 				families: ["Poppins:400,800", "Roboto:400"],
 			},
 		});
-
-		import("./style.scss");
 	}, []);
 
 	return (
-		<b>
+		<div className={$.flamingo_container}>
 			<Navigation />
 			<Outlet />
 			<Footer />
-		</b>
+		</div>
 	);
 };
 

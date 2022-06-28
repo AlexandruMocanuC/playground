@@ -7,6 +7,8 @@ import { base } from "~/constants";
 const isProduction = process.env.NODE_ENV === "production";
 const PUBLIC_URL = isProduction ? `${base}/static/home` : "/home";
 
+import $ from "./style.scss";
+
 const Home = () => {
 	useEffect(() => {
 		WebFont.load({
@@ -14,8 +16,6 @@ const Home = () => {
 				families: ["Crimson+Text:400,700", "Raleway:400,700"],
 			},
 		});
-
-		import("./style.css");
 	}, []);
 
 	const projects = [
@@ -52,14 +52,14 @@ const Home = () => {
 	];
 
 	return (
-		<div className="container">
-			<div className="header">
-				<div className="row">
-					<div className="subrow">
-						<div className="heading">
+		<div className={$.container}>
+			<div className={$.header}>
+				<div className={$.row}>
+					<div className={$.subrow}>
+						<div className={$.heading}>
 							Hi, I’m Matt. Nice to meet you.
 						</div>
-						<div className="intro">
+						<div className={$.intro}>
 							Since beginning my journey as a freelance designer
 							nearly 10 years ago, I've done remote work for
 							agencies, consulted for startups, and collaborated
@@ -72,35 +72,37 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			<div className="content">
-				<div className="row">
-					<div className="section_heading">My Recent Work</div>
-					<div className="paragraph">
+			<div className={$.content}>
+				<div className={$.row}>
+					<div className={$.section_heading}>My Recent Work</div>
+					<div className={$.paragraph}>
 						Here are a few design projects I've worked on recently.
 						Want to see more?{" "}
 						<a
 							href="mailto:alexandru.mocanu.dev@gmail.com"
-							className="button"
+							className={$.button}
 						>
 							Email me
 						</a>
 						.
 					</div>
-					<div className="columns">
+					<div className={$.columns}>
 						{projects.map((project, index) => (
-							<div className="column" key={index}>
-								<Link className="link" to={project.url}>
-									<div className="project_wrapper">
+							<div className={$.column} key={index}>
+								<Link className={$.link} to={project.url}>
+									<div className={$.project_wrapper}>
 										<div
-											className="project"
+											className={$.project}
 											style={{
 												backgroundImage: project.image,
 											}}
 										></div>
 									</div>
-									<div className="project_name">
+									<div className={$.project_name}>
 										{project.name}
-										<i className="fas fa-chevron-right icon"></i>
+										<i
+											className={`fas fa-chevron-right ${$.icon}`}
+										></i>
 									</div>
 								</Link>
 							</div>
@@ -108,9 +110,9 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			<div className="footer">
-				<div className="row">
-					<div className="contacts">
+			<div className={$.footer}>
+				<div className={$.row}>
+					<div className={$.contacts}>
 						<a href="tel:+40727729068">+40727 729 068</a>
 						<a href="mailto:alexandru.mocanu.dev@gmail.com">
 							alexandru.mocanu.dev@gmail.com

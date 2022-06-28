@@ -1,36 +1,36 @@
-import React, { useEffect } from 'react';
-import { team } from './db';
+import React from "react";
+import { team } from "./db";
 
-import { PUBLIC_URL } from '~/constants/flamingo';
+import { PUBLIC_URL } from "~/constants/flamingo";
 
-const Team = () => {
-	useEffect(() => {
-		import('./team.css');
-	}, []);
-	return (
-		<div className="team">
-			{team.map((member, index) => (
-				<div
-					className="bg-cover member"
-					style={{
-						backgroundImage: member.image,
-					}}
-					key={index}
-				>
-					<div className="member-details">
-						<h4 className="mb-default">{member.name}</h4>
-						<p className="mb-m">{member.position}</p>
-						<div className="social-media-small">
-							{member.socialMedia.map((item, key) => (
-								<a href={item.link} key={key}>
-									<i className={item.icon}></i>
-								</a>
-							))}
-						</div>
+import $ from "./team.css";
+
+const Team = () => (
+	<div className={$.team}>
+		{team.map((member, index) => (
+			<div
+				className={$.member}
+				style={{
+					backgroundImage: member.image,
+				}}
+				key={index}
+			>
+				<div className={$.member_details}>
+					<div className={`${$.mb_default} ${$.h4}`}>
+						{member.name}
+					</div>
+					<p className={$.mb_m}>{member.position}</p>
+					<div className={$.social_media_small}>
+						{member.socialMedia.map((item, key) => (
+							<a href={item.link} key={key}>
+								<i className={item.icon}></i>
+							</a>
+						))}
 					</div>
 				</div>
-			))}
-		</div>
-	);
-};
+			</div>
+		))}
+	</div>
+);
+
 export default Team;

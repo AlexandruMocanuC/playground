@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import WebFont from "webfontloader";
 
+import $ from "./style.scss";
+
 const Rating = () => {
 	useEffect(() => {
 		WebFont.load({
@@ -8,8 +10,6 @@ const Rating = () => {
 				families: ["Varela+Round"],
 			},
 		});
-
-		import("./style.css");
 	}, []);
 
 	const [selectedRating, selectRating] = useState(null);
@@ -19,25 +19,25 @@ const Rating = () => {
 	const points = [1, 2, 3, 4, 5];
 
 	return (
-		<div className="container">
-			<div className="rating_box">
+		<div className={$.container}>
+			<div className={$.rating_box}>
 				{!isSubmited ? (
 					<>
-						<div className="icon">
+						<div className={$.icon}>
 							<i className="fas fa-star"></i>
 						</div>
-						<div className="title">How did we do?</div>
-						<div className="description">
+						<div className={$.title}>How did we do?</div>
+						<div className={$.description}>
 							Please let us know how we did with your support
 							request. All feedback is apreciated to help us
 							improve out offering!
 						</div>
-						<div className="rating_points">
+						<div className={$.rating_points}>
 							{points.map((point, index) => (
 								<div
-									className={`point ${
+									className={`${$.point} ${
 										selectedRating === point
-											? "is_active"
+											? $.is_active
 											: null
 									}`}
 									key={index}
@@ -54,7 +54,7 @@ const Rating = () => {
 							))}
 						</div>
 						<div
-							className="button"
+							className={$.button}
 							onClick={() =>
 								selectedRating !== null
 									? setSubmit(true)
@@ -65,23 +65,23 @@ const Rating = () => {
 						</div>
 
 						{hasError ? (
-							<div className="error">
+							<div className={$.error}>
 								You must select a rating first!
 							</div>
 						) : null}
 					</>
 				) : (
 					<>
-						<div className="icon">
+						<div className={$.icon}>
 							<i className="fas fa-star"></i>
 						</div>
-						<div className="title">Thanks for your feedback!</div>
-						<div className="description">
+						<div className={$.title}>Thanks for your feedback!</div>
+						<div className={$.description}>
 							We kindly appreciate your feedback!
 						</div>
 
 						<div
-							className="button"
+							className={$.button}
 							onClick={() => {
 								setSubmit(false);
 								selectRating(null);

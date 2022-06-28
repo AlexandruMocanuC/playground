@@ -1,28 +1,26 @@
-import React, { useEffect } from 'react';
-import { works } from './db';
+import React from "react";
+import { works } from "./db";
 
-import { PUBLIC_URL } from '~/constants/flamingo';
+import { PUBLIC_URL } from "~/constants/flamingo";
 
-const Works = () => {
-	useEffect(() => {
-		import('./works.css');
-	}, []);
-	return (
-		<div className="works">
-			{works.map((work, index) => (
-				<div
-					className="work bg-cover"
-					style={{
-						backgroundImage: work.image,
-					}}
-					key={index}
-				>
-					<div className="overlay">
-						<h4>{work.name}</h4>
-					</div>
+import $ from "./works.css";
+
+const Works = () => (
+	<div className={$.works}>
+		{works.map((work, index) => (
+			<div
+				className={$.work}
+				style={{
+					backgroundImage: work.image,
+				}}
+				key={index}
+			>
+				<div className={$.overlay}>
+					<div className={$.h4}>{work.name}</div>
 				</div>
-			))}
-		</div>
-	);
-};
+			</div>
+		))}
+	</div>
+);
+
 export default Works;
