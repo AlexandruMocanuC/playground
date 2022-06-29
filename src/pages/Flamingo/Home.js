@@ -42,7 +42,7 @@ const FlamingoHome = () => (
 					<span className={$.separator} />
 					{home.services.heading}
 				</div>
-				<div className={`${$.ml_l} ${$.h5}`}>
+				<div className={`${$.mb_l} ${$.h5}`}>
 					{home.services.description}
 				</div>
 				<Services />

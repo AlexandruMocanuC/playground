@@ -49,6 +49,11 @@ const Home = () => {
 			name: "Traveling guides",
 			url: `${base}travel/`,
 		},
+		{
+			image: `url(${PUBLIC_URL}/Qr.jpg)`,
+			name: "Qr component",
+			url: `${base}qr/`,
+		},
 	];
 
 	return (

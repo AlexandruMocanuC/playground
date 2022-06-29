@@ -68,6 +68,11 @@ module.exports = {
       import: "./src/pages/Faq/index.js",
     },
     faq: "./src/pages/Faq/style.scss",
+    qr: {
+      dependOn: "app",
+      import: "./src/pages/Qr/index.js",
+    },
+    qr: "./src/pages/Qr/style.scss",
   },
   output: {
     filename: "[name].[hash].js",
@@ -215,6 +220,12 @@ module.exports = {
     new HtmlWebPackPlugin({
       filename: "faq/index.html",
       chunks: ["app", "faq"],
+      template: "./src/index.html",
+      inject: "head",
+    }),
+    new HtmlWebPackPlugin({
+      filename: "qr/index.html",
+      chunks: ["app", "qr"],
       template: "./src/index.html",
       inject: "head",
     }),

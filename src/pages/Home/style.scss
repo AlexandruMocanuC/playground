@@ -9,18 +9,20 @@
 
     font-family: var(--font-primary);
     font-size: 1.2rem;
-    background-color: #ccc;
+    background-color: #eee;
 }
 .point {
     margin: 0;
     display: flex;
     align-items: center;
+    line-height: 1.5;
 }
 .point i {
     font-size: 0.4rem;
     margin-right: 0.5rem;
 }
 .header {
+    color: #eee;
     background: linear-gradient(
         -45deg,
         var(--orange),

@@ -9,6 +9,7 @@ import Forest, { routes as forestRoutes } from "~/pages/Forest";
 import Contacts, { routes as contactsRoutes } from "~/pages/Contacts";
 import Rating from "~/pages/Rating";
 import Faq from "~/pages/Faq";
+import Qr from "~/pages/Qr";
 
 import { base } from "~/constants";
 
@@ -49,6 +50,10 @@ const routes = [
 	{
 		path: `${base}faq/`,
 		element: <Faq />,
+	},
+	{
+		path: `${base}qr/`,
+		element: <Qr />,
 	},
 ];
 
