@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import WebFont from "webfontloader";
 import { Link } from "react-router-dom";
 
@@ -17,6 +17,10 @@ const Home = () => {
 			},
 		});
 	}, []);
+
+	const content = useRef(null);
+	const executeScroll = () =>
+		content.current.scrollIntoView({ behavior: "smooth" });
 
 	const projects = [
 		{
@@ -107,8 +111,11 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
+				<div className={$.scroll} onClick={executeScroll}>
+					<i className="fas fa-chevron-down"></i>
+				</div>
 			</div>
-			<div className={$.content}>
+			<div className={$.content} ref={content}>
 				<div className={$.row}>
 					<div className={$.section_heading}>My Playground</div>
 					<div className={$.paragraph}>
