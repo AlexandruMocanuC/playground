@@ -59,6 +59,12 @@ const Todo = () => {
 		}
 	};
 
+	const handleKeyDown = e => {
+		if (e.key === "Enter") {
+			onSave();
+		}
+	};
+
 	return (
 		<div className={$.container}>
 			<div className={$.card}>
@@ -92,6 +98,7 @@ const Todo = () => {
 								type="text"
 								placeholder="Add item"
 								className={$.input}
+								onKeyDown={e => handleKeyDown(e)}
 							/>
 							<div onClick={() => onSave()} className={$.save}>
 								<i className="fas fa-check"></i>
