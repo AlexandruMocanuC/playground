@@ -16,6 +16,7 @@ const Qr = () => {
 			},
 		});
 	}, []);
+
 	return (
 		<div className={$.container}>
 			<div className={$.card}>

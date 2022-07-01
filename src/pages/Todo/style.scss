@@ -1,0 +1,124 @@
+.container {
+	background-image: linear-gradient(180deg, #4a707a, #6797a0);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	font-family: "Varela Round", sans-serif;
+}
+.card {
+	border-radius: 0.5rem;
+	background-color: #fff;
+	padding: 5rem 2rem;
+	margin: 1rem;
+	width: 20rem;
+	text-align: center;
+	position: relative;
+}
+.heading {
+	font-weight: bold;
+	font-size: 1.25rem;
+	margin-bottom: 1.5rem;
+	color: #656d78;
+}
+.check {
+	border: 2px solid #ccd1d9;
+	border-radius: 0.25rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.2s all ease-in-out;
+	justify-content: center;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+.check:hover {
+	border-color: #aab2bd;
+}
+.check i {
+	color: #c6871e;
+}
+.list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.item {
+	display: flex;
+	align-items: center;
+	text-align: left;
+	position: relative;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+.name {
+	margin-left: 1rem;
+	color: #656d78;
+	margin-right: 2rem;
+}
+.trash_bin {
+	position: absolute;
+	right: 0;
+	color: #656d78;
+	transition: 0.2s all ease-in-out;
+	cursor: pointer;
+}
+.trash_bin:hover {
+	color: #aab2bd;
+}
+.add_action {
+	background-color: #c6871e;
+	border: 2px solid #656d78;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: auto;
+	bottom: -1.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	cursor: pointer;
+	transition: 0.2s all ease-in-out;
+}
+.add_action:hover {
+	background-color: #fff;
+	color: #c6871e;
+}
+.rotate {
+}
+.input {
+	width: 100%;
+	border: 0 none;
+	border-bottom: 2px solid #656d78;
+	font-size: 1rem;
+	font-family: "Varela Round", sans-serif;
+	transition: 0.2s all ease-in-out;
+}
+.input:focus-visible {
+	outline: none;
+}
+.input:focus {
+	border-color: #c6871e;
+}
+.add_item {
+	width: 100%;
+	display: flex;
+}
+.save {
+	margin-left: 0.5rem;
+	margin-right: -0.5rem;
+	cursor: pointer;
+	transition: 0.2s all ease-in-out;
+	padding: 0.5rem;
+}
+.save:hover {
+	color: #c6871e;
+}

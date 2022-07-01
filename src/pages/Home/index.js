@@ -58,6 +58,11 @@ const Home = () => {
 			name: "Qr component",
 			url: `${base}qr/`,
 		},
+		{
+			image: `url(${PUBLIC_URL}/Todo.jpg)`,
+			name: "Shopping list",
+			url: `${base}todo/`,
+		},
 	];
 
 	return (

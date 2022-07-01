@@ -10,6 +10,7 @@ import Contacts, { routes as contactsRoutes } from "~/pages/Contacts";
 import Rating from "~/pages/Rating";
 import Faq from "~/pages/Faq";
 import Qr from "~/pages/Qr";
+import Todo from "~/pages/Todo";
 
 import { base } from "~/constants";
 
@@ -54,6 +55,10 @@ const routes = [
 	{
 		path: `${base}qr/`,
 		element: <Qr />,
+	},
+	{
+		path: `${base}todo/`,
+		element: <Todo />,
 	},
 ];
 
