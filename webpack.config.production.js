@@ -73,6 +73,11 @@ module.exports = {
       import: "./src/pages/Qr/index.js",
     },
     qr: "./src/pages/Qr/style.scss",
+    todo: {
+      dependOn: "app",
+      import: "./src/pages/Todo/index.js",
+    },
+    todo: "./src/pages/Todo/style.scss",
   },
   output: {
     filename: "[name].[hash].js",
@@ -226,6 +231,12 @@ module.exports = {
     new HtmlWebPackPlugin({
       filename: "qr/index.html",
       chunks: ["app", "qr"],
+      template: "./src/index.html",
+      inject: "head",
+    }),
+    new HtmlWebPackPlugin({
+      filename: "todo/index.html",
+      chunks: ["app", "todo"],
       template: "./src/index.html",
       inject: "head",
     }),
